@@ -1,12 +1,9 @@
-/* eslint-disable no-underscore-dangle */
-
+import { Theme } from '@material-ui/core/styles/createMuiTheme'
 import { SheetsRegistry } from 'jss'
 import { createMuiTheme, createGenerateClassName } from '@material-ui/core/styles'
 import purple from '@material-ui/core/colors/purple'
 import green from '@material-ui/core/colors/green'
 
-// A theme with custom primary and secondary color.
-// It's optional.
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -25,7 +22,14 @@ const theme = createMuiTheme({
   },
 })
 
-function createPageContext() {
+export interface IPageContext {
+  theme: Theme
+  sheetsManager: Map<any, any>
+  sheetsRegistry: any
+  generateClassName: any
+}
+
+const createPageContext = (): IPageContext => {
   return {
     theme,
     // This is needed in order to deduplicate the injection of CSS in the page.
@@ -37,7 +41,7 @@ function createPageContext() {
   }
 }
 
-export default function getPageContext() {
+const getPageContext = (): IPageContext => {
   // Make sure to create a new context for every server-side request so that data
   // isn't shared between connections (which would be bad).
   if (!process.browser) {
@@ -51,3 +55,5 @@ export default function getPageContext() {
 
   return global.__INIT_MATERIAL_UI__
 }
+
+export default getPageContext

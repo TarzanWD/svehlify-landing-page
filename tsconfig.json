@@ -15,5 +15,5 @@
     "preserveConstEnums": true,
     "sourceMap": true
   },
-  "types": "./index.d.ts"
+  "types": "./global.d.ts"
 }

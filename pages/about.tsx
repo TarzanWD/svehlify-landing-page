@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-
 import React from 'react'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
@@ -16,12 +14,8 @@ const styles = (theme: Theme) => createStyles({
 })
 
 interface IProps extends WithStyles<typeof styles> {}
-interface IState {
-  open?: boolean
-}
 
-
-class About extends React.Component<IProps, IState> {
+class About extends React.Component<IProps, null> {
   public render() {
     const { classes } = this.props
 

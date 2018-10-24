@@ -1,3 +1,3 @@
 declare var process : {
-  browser: any
+    browser : any
 }

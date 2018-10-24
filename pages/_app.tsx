@@ -3,9 +3,16 @@ import App, { Container } from 'next/app'
 import { MuiThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import JssProvider from 'react-jss/lib/JssProvider'
-import getPageContext from '../src/getPageContext'
+import getPageContext, { IPageContext } from '../src/getPageContext'
 
-class MyApp extends App {
+interface IProps {
+  Component: React.ReactNode
+  pageProps: any
+}
+
+class MyApp extends App<IProps> {
+  private pageContext: IPageContext | null = null
+
   constructor(props) {
     super(props)
     this.pageContext = getPageContext()
@@ -22,26 +29,30 @@ class MyApp extends App {
   public render() {
     const { Component, pageProps } = this.props
     return (
-      <Container>
-        {/* Wrap every page in Jss and Theme providers */}
-        <JssProvider
-          registry={this.pageContext.sheetsRegistry}
-          generateClassName={this.pageContext.generateClassName}
-        >
-          {/* MuiThemeProvider makes the theme available down the React
-              tree thanks to React context. */}
-          <MuiThemeProvider
-            theme={this.pageContext.theme}
-            sheetsManager={this.pageContext.sheetsManager}
+      <>
+        <title>Svehlify</title>
+        <Container>
+          {/* Wrap every page in Jss and Theme providers */}
+          <JssProvider
+            registry={this.pageContext.sheetsRegistry}
+            generateClassName={this.pageContext.generateClassName}
           >
-            {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-            <CssBaseline />
-            {/* Pass pageContext to the _document though the renderPage enhancer
-                to render collected styles on server side. */}
-            <Component pageContext={this.pageContext} {...pageProps} />
-          </MuiThemeProvider>
-        </JssProvider>
-      </Container>
+            {/* MuiThemeProvider makes the theme available down the React
+                tree thanks to React context. */}
+            <MuiThemeProvider
+              theme={this.pageContext.theme}
+              sheetsManager={this.pageContext.sheetsManager}
+            >
+              {/* CssBaseline kickstart an elegant,
+                consistent, and simple baseline to build upon. */}
+              <CssBaseline />
+              {/* Pass pageContext to the _document though the renderPage enhancer
+                  to render collected styles on server side. */}
+              <Component pageContext={this.pageContext} {...pageProps} />
+            </MuiThemeProvider>
+          </JssProvider>
+        </Container>
+      </>
     )
   }
 }

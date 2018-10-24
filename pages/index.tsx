@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 import React from 'react'
-import PropTypes from 'prop-types'
 import Button from '@material-ui/core/Button'
 import Dialog from '@material-ui/core/Dialog'
 import DialogTitle from '@material-ui/core/DialogTitle'
@@ -11,29 +10,32 @@ import DialogActions from '@material-ui/core/DialogActions'
 import Typography from '@material-ui/core/Typography'
 import { withStyles } from '@material-ui/core/styles'
 import Link from 'next/link'
+import { WithStyles, createStyles } from '@material-ui/core'
+import { Theme } from '@material-ui/core/styles/createMuiTheme'
 
-const styles = theme => ({
+const styles = (theme: Theme) => createStyles({
   root: {
     textAlign: 'center',
     paddingTop: theme.spacing.unit * 20,
   },
 })
 
-class Index extends React.Component {
+interface IProps extends WithStyles<typeof styles> {}
+interface IState {
+  open?: boolean
+}
+
+class Index extends React.Component<IProps, IState> {
   public state = {
     open: false,
   }
 
   public handleClose = () => {
-    this.setState({
-      open: false,
-    })
+    this.setState({ open: false })
   }
 
   public handleClick = () => {
-    this.setState({
-      open: true,
-    })
+    this.setState({ open: true })
   }
 
   public render() {
@@ -70,10 +72,6 @@ class Index extends React.Component {
       </div>
     )
   }
-}
-
-Index.propTypes = {
-  classes: PropTypes.object.isRequired,
 }
 
 export default withStyles(styles)(Index)
