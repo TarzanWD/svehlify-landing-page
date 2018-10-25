@@ -1,8 +1,7 @@
 import { createStyles } from '@material-ui/core'
-import { Theme } from '@material-ui/core/styles/createMuiTheme'
 import { container } from '../material-kit-react'
 
-const componentsStyles = (theme: Theme) => createStyles({
+const componentsStyles = () => createStyles({
   container,
   brand: {
     color: '#FFFFFF',

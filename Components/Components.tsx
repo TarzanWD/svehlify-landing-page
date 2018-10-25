@@ -12,6 +12,8 @@ import Parallax from './component/Parallax/Parallax'
 import SectionLogin from './Sections/SectionLogin'
 import TeamSection from './Sections/TeamSection'
 
+const mainPhotoSrc = '/static/img/bg4.jpg'
+// 'https://cdn.allwallpaper.in/wallpapers/1920x1200/14179/computers-money-programming-code-black-background-1920x1200-wallpaper.jpg'
 interface IProps extends WithStyles<typeof componentsStyles>  {}
 
 class Components extends React.Component<IProps> {
@@ -20,7 +22,7 @@ class Components extends React.Component<IProps> {
     return (
       <div>
         <Header
-          brand='Material Kit React'
+          brand='Javascript školení na míru'
           rightLinks={<HeaderLinks />}
           fixed
           color='transparent'
@@ -29,14 +31,14 @@ class Components extends React.Component<IProps> {
             color: 'white',
           }}
         />
-        <Parallax image={'/static/img/bg4.jpg'}>
+        <Parallax image={mainPhotoSrc}>
           <div className={classes.container}>
             <GridContainer>
               <GridItem>
                 <div className={classes.brand}>
-                  <h1 className={classes.title}>Material Kit React.</h1>
+                  <h1 className={classes.title}>Svehlify</h1>
                   <h3 className={classes.subtitle}>
-                    A Badass Material-UI Kit based on Material Design.
+                    Školení bleeding edge technologí
                   </h3>
                 </div>
               </GridItem>
