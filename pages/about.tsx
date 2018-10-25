@@ -1,10 +1,8 @@
-import React from 'react'
-import Button from '@material-ui/core/Button'
-import Typography from '@material-ui/core/Typography'
+import { createStyles, WithStyles } from '@material-ui/core'
 import { withStyles } from '@material-ui/core/styles'
-import Link from 'next/link'
-import { WithStyles, createStyles } from '@material-ui/core'
 import { Theme } from '@material-ui/core/styles/createMuiTheme'
+import React from 'react'
+import Components from '../Components/Components'
 
 const styles = (theme: Theme) => createStyles({
   root: {
@@ -17,25 +15,9 @@ interface IProps extends WithStyles<typeof styles> {}
 
 class About extends React.Component<IProps, null> {
   public render() {
-    const { classes } = this.props
 
     return (
-      <div className={classes.root}>
-        <Typography variant='h4' gutterBottom={true}>
-          Material-UI
-        </Typography>
-        <Typography variant='subtitle1' gutterBottom={true}>
-          about page
-        </Typography>
-        <Typography gutterBottom={true}>
-          <Link href='/'>
-            <a>Go to the main page</a>
-          </Link>
-        </Typography>
-        <Button variant='contained' color='primary'>
-          Do nothing button
-        </Button>
-      </div>
+      <Components />
     )
   }
 }

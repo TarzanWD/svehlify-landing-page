@@ -1,5 +1,5 @@
-import React from 'react'
 import Document, { Head, Main, NextScript } from 'next/document'
+import React from 'react'
 // tslint:disable-next-line:no-implicit-dependencies https://github.com/zeit/styled-jsx/issues/308
 import flush from 'styled-jsx/server'
 import { IPageContext } from '../src/getPageContext'

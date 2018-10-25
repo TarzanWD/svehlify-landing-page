@@ -1,7 +1,7 @@
-import React from 'react'
-import App, { Container } from 'next/app'
-import { MuiThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
+import { MuiThemeProvider } from '@material-ui/core/styles'
+import App, { Container } from 'next/app'
+import React from 'react'
 import JssProvider from 'react-jss/lib/JssProvider'
 import getPageContext, { IPageContext } from '../src/getPageContext'
 

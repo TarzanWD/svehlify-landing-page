@@ -11,7 +11,7 @@
     "new-parens": true,
     "no-arg": true,
     "arrow-parens": false,
-    "no-unused-variable": true,
+    "no-unused-variable": false,
     "no-bitwise": true,
     "object-literal-sort-keys": false,
     "no-conditional-assignment": true,
@@ -29,6 +29,7 @@
         "log",
         "trace"
       ]
-    }
+    },
+    "jsx-boolean-value": false
   }
 }
