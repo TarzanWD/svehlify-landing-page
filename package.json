@@ -7,7 +7,9 @@
     "dev": "next",
     "lint": "tslint -p ./tsconfig.json",
     "lint:fix": "tslint --fix -p ./tsconfig.json",
-    "start": "next start"
+    "start": "next start",
+    "start:prod": "next start -p 1337",
+    "deploy:prod": "./deploy-scripts/production-deploy.sh"
   },
   "dependencies": {
     "@material-ui/core": "latest",
