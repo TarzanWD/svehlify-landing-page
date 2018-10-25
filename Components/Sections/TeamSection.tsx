@@ -10,9 +10,9 @@ import Button from '../component/CustomButtons/Button'
 import GridContainer from '../component/Grid/GridContainer'
 import GridItem from '../component/Grid/GridItem'
 
-const team1 = 'static/img/faces/avatar.jpg'
-const team2 = 'static/img/faces/christian.jpg'
-const team3 = 'static/img/faces/kendall.jpg'
+const team1 = 'static/img/faces/1.jpg' // avatar.jpg'
+const team2 = 'static/img/faces/2.jpg' // christian.jpg'
+const team3 = 'static/img/faces/3.jpg' // kendall.jpg'
 
 interface IProps extends WithStyles<typeof teamStyle> {}
 
@@ -34,9 +34,9 @@ const TeamSection = (props: IProps) => {
                 <img src={team1} alt='...' className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                Gigi Hadid
+                Šve Hlakuba
                 <br />
-                <small className={classes.smallTitle}>Model</small>
+                <small className={classes.smallTitle}>Project lead manager</small>
               </h4>
               <CardBody>
                 <p className={classes.description}>
@@ -77,9 +77,9 @@ const TeamSection = (props: IProps) => {
                 <img src={team2} alt='...' className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                Christian Louboutin
+                Kuba Svehla
                 <br />
-                <small className={classes.smallTitle}>Designer</small>
+                <small className={classes.smallTitle}>CEO</small>
               </h4>
               <CardBody>
                 <p className={classes.description}>
@@ -113,9 +113,9 @@ const TeamSection = (props: IProps) => {
                 <img src={team3} alt='...' className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                Kendall Jenner
+                Švehl Ajakub
                 <br />
-                <small className={classes.smallTitle}>Model</small>
+                <small className={classes.smallTitle}>CTO</small>
               </h4>
               <CardBody>
                 <p className={classes.description}>

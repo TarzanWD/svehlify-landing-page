@@ -78,6 +78,7 @@ class MyDocument extends Document<IProps>  {
             rel='stylesheet'
             href='https://fonts.googleapis.com/css?family=Roboto:300,400,500'
           />
+          <link rel='stylesheet' href='/static/base.css' />
         </Head>
         <body>
           <Main />

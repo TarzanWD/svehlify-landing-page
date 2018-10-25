@@ -4,6 +4,8 @@ import { Theme } from '@material-ui/core/styles/createMuiTheme'
 import React from 'react'
 import Components from '../Components/Components'
 
+// import 'typeface-roboto'
+
 const styles = (theme: Theme) => createStyles({
   root: {
     textAlign: 'center',
@@ -17,7 +19,9 @@ class About extends React.Component<IProps, null> {
   public render() {
 
     return (
-      <Components />
+      <>
+        <Components />
+      </>
     )
   }
 }

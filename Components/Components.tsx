@@ -12,7 +12,7 @@ import Parallax from './component/Parallax/Parallax'
 import SectionLogin from './Sections/SectionLogin'
 import TeamSection from './Sections/TeamSection'
 
-const mainPhotoSrc = '/static/img/bg4.jpg'
+const mainPhotoSrc = '/static/img/bg2.jpg'
 // 'https://cdn.allwallpaper.in/wallpapers/1920x1200/14179/computers-money-programming-code-black-background-1920x1200-wallpaper.jpg'
 interface IProps extends WithStyles<typeof componentsStyles>  {}
 
