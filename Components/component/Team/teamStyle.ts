@@ -1,7 +1,7 @@
 import { createStyles } from '@material-ui/core'
 import { Theme } from '@material-ui/core/styles/createMuiTheme'
-import { cardTitle, title } from '../../../material-kit-react'
-import imagesStyle from '../../imagesStyles'
+import { cardTitle, title } from '../../assets/jss/material-kit-react'
+import imagesStyle from '../../assets/jss/globalComponents/imagesStyles'
 
 const teamStyle = (theme: Theme) => createStyles({
   section: {

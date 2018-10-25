@@ -1,6 +1,6 @@
 import { createStyles } from '@material-ui/core'
 import { Theme } from '@material-ui/core/styles/createMuiTheme'
-import { container } from '../../../material-kit-react'
+import { container } from '../../assets/jss/material-kit-react'
 
 const image = 'static/img/sign.jpg'
 

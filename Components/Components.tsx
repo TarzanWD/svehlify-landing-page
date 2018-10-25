@@ -2,7 +2,7 @@ import { WithStyles } from '@material-ui/core'
 import withStyles from '@material-ui/core/styles/withStyles'
 import classNames from 'classnames'
 import React from 'react'
-import componentsStyles from './assets/jss/material-kit-react/views/components'
+import componentsStyles from './assets/jss/globalComponents/componentsStyles'
 import Footer from './component/Footer/Footer'
 import GridContainer from './component/Grid/GridContainer'
 import GridItem from './component/Grid/GridItem'
@@ -11,7 +11,6 @@ import HeaderLinks from './component/Header/HeaderLinks'
 import Parallax from './component/Parallax/Parallax'
 import SectionLogin from './Sections/SectionLogin'
 import TeamSection from './Sections/TeamSection'
-
 
 interface IProps extends WithStyles<typeof componentsStyles>  {}
 

@@ -7,7 +7,7 @@ import Email from '@material-ui/icons/Email'
 // @material-ui/icons
 import People from '@material-ui/icons/People'
 import React from 'react'
-import loginStyle from '../assets/jss/material-kit-react/views/componentsSections/loginStyle'
+import loginStyle from '../component/Login/loginStyle'
 import Card from '../component/Card/Card'
 import CardBody from '../component/Card/CardBody'
 import CardFooter from '../component/Card/CardFooter'
