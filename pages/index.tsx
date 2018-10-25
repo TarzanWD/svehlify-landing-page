@@ -46,6 +46,10 @@ class Index extends React.Component<IProps, IState> {
     this.setState({ open: true })
   }
 
+  public handleDelete = () => {
+    // nothing
+  }
+
   public render() {
     const { classes } = this.props
     const { open } = this.state
@@ -63,7 +67,7 @@ class Index extends React.Component<IProps, IState> {
                     alt='Contemplative Reptile'
                     className={classes.media}
                     height='140'
-                    image='https://techcrunch.com/wp-content/uploads/2015/04/codecode.jpg?w=730&crop=1'
+                    image='/static/img/bg4.jpg'
                     title='Contemplative Reptile'
                   />
                   <CardContent>
@@ -96,7 +100,7 @@ class Index extends React.Component<IProps, IState> {
                     alt='Contemplative Reptile'
                     className={classes.media}
                     height='140'
-                    image='https://techcrunch.com/wp-content/uploads/2015/04/codecode.jpg?w=730&crop=1'
+                    image='/static/img/bg4.jpg'
                     title='Contemplative Reptile'
                   />
                   <CardContent>
@@ -104,7 +108,8 @@ class Index extends React.Component<IProps, IState> {
                       Přeorientujte své nudné REST-API na GraphQL
                     </Typography>
                     <Typography component='p'>
-                      Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                      Lizards are a widespread group of squamate
+                      reptiles, with over 6,000 species, ranging
                       across all continents except Antarctica
                     </Typography>
                   </CardContent>
@@ -130,7 +135,7 @@ class Index extends React.Component<IProps, IState> {
                     alt='Contemplative Reptile'
                     className={classes.media}
                     height='140'
-                    image='https://techcrunch.com/wp-content/uploads/2015/04/codecode.jpg?w=730&crop=1'
+                    image='/static/img/bg4.jpg'
                     title='Contemplative Reptile'
                   />
                   <CardContent>
@@ -138,7 +143,8 @@ class Index extends React.Component<IProps, IState> {
                       React frontend
                     </Typography>
                     <Typography component='p'>
-                      Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                      Lizards are a widespread group of squamate
+                      reptiles, with over 6,000 species, ranging
                       across all continents except Antarctica
                     </Typography>
                     <Chip

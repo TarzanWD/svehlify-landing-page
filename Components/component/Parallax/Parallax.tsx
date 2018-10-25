@@ -1,57 +1,50 @@
+import { WithStyles } from '@material-ui/core'
 import withStyles from '@material-ui/core/styles/withStyles'
 import classNames from 'classnames'
-import * as React from 'react'
-import { WithStyles } from '@material-ui/core'
-import parallaxStyles from '../../assets/jss/material-kit-react/components/parallaxStyle'
+import React from 'react'
 
+import parallaxStyle from './parallaxStyle'
 
-interface IProps extends WithStyles<typeof parallaxStyles>  {
+interface IProps extends WithStyles<typeof parallaxStyle>  {
   filter?: boolean
   className?: string
   children?: React.ReactNode
-  style?: string
+  style?: React.CSSProperties
   image?: string
-  small?: any
+  small?: boolean
 }
 
 interface IState {
   transform: string
 }
 class Parallax extends React.Component<IProps, IState> {
+
+  private static getScrollTransform = () => {
+    const pageOffset = window.pageYOffset / 3
+    return `translate3d(0, ${pageOffset}px, 0)`
+  }
+
   constructor(props) {
     super(props)
-    if (typeof window !== typeof undefined) {
-      const windowScrollTop = window.pageYOffset / 3
+
+    if (typeof window !== typeof undefined) {
       this.state = {
-        transform: `translate3d(0,${windowScrollTop}px,0)`,
+        transform: Parallax.getScrollTransform()
       }
-      this.resetTransform = this.resetTransform.bind(this)
     }
   }
 
   public componentDidMount() {
-    if (typeof window !== typeof undefined) {
-      const windowScrollTop = window.pageYOffset / 3
-      this.setState({
-        transform: `translate3d(0, ${windowScrollTop}'px,0)`,
-      })
-      window.addEventListener('scroll', this.resetTransform)
-    }
+    this.setState({ transform: Parallax.getScrollTransform() })
+    window.addEventListener('scroll', this.resetTransform)
   }
 
   public componentWillUnmount() {
-    if (typeof window !== typeof undefined) {
-      window.removeEventListener('scroll', this.resetTransform)
-    }
+    window.removeEventListener('scroll', this.resetTransform)
   }
 
-  public resetTransform() {
-    if (typeof window !== typeof undefined) {
-      const windowScrollTop = window.pageYOffset / 3
-      this.setState({
-        transform: `translate3d(0, ${windowScrollTop}'px,0)`,
-      })
-    }
+  public resetTransform = () => {
+    this.setState({ transform: Parallax.getScrollTransform() })
   }
 
   public render() {
@@ -62,13 +55,13 @@ class Parallax extends React.Component<IProps, IState> {
       children,
       style,
       image,
-      small,
+      small
     } = this.props
     const parallaxClasses = classNames({
       [classes.parallax]: true,
       [classes.filter]: filter,
       [classes.small]: small,
-      [className]: className !== undefined,
+      [className]: className !== undefined
     })
     return (
       <div
@@ -76,7 +69,7 @@ class Parallax extends React.Component<IProps, IState> {
         style={{
           ...style,
           backgroundImage: 'url(' + image + ')',
-          ...this.state,
+          ...this.state
         }}
         ref='parallax'
       >
@@ -86,4 +79,5 @@ class Parallax extends React.Component<IProps, IState> {
   }
 }
 
-export default withStyles(parallaxStyles)(Parallax)
+
+export default withStyles(parallaxStyle)(Parallax)

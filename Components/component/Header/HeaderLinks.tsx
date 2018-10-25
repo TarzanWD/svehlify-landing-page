@@ -1,53 +1,37 @@
 /*eslint-disable*/
-import React from 'react'
 import Link from 'next/link'
+import React from 'react'
 
 // @material-ui/core components
-import withStyles from '@material-ui/core/styles/withStyles'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
+import withStyles from '@material-ui/core/styles/withStyles'
 import Tooltip from '@material-ui/core/Tooltip'
 
 // @material-ui/icons
 import { Apps, CloudDownload } from '@material-ui/icons'
 
 // core components
-import CustomDropdown from '../CustomDropdown/CustomDropdown'
 import Button from '../CustomButtons/Button'
 
-import headerLinksStyle from '../../assets/jss/material-kit-react/components/headerLinksStyle'
+import headerLinksStyle from './headerLinksStyle'
 
-function HeaderLinks({ ...props }) {
-  if (typeof window === typeof undefined) {
-    var window = {}
-  }
+const HeaderLinks = ({ ...props }) => {
+  const innerWidth = typeof window !== typeof undefined
+    ? window.innerWidth
+    : 0
   const { classes } = props
   return (
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
-        <CustomDropdown
-          noLiPadding
-          buttonText='Components'
-          buttonProps={{
-            className: classes.navLink,
-            color: 'transparent',
-          }}
-          buttonIcon={Apps}
-          dropdownList={[
-            // className={classes.dropdownLink}
-            <Link href='/' key={1}>
-              <a>All components</a>
-            </Link>,
-            <a
-              key={2}
-              href='https://creativetimofficial.github.io/material-kit-react/#/documentation'
-              target='_blank'
-              className={classes.dropdownLink}
-            >
-              Documentation
-            </a>,
-          ]}
-        />
+          <Button
+            href='https://twitter.com/CreativeTim'
+            target='_blank'
+            color='transparent'
+            className={classes.navLink}
+          >
+            <CloudDownload className={classes.icons} /> Download
+          </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
@@ -63,7 +47,7 @@ function HeaderLinks({ ...props }) {
         <Tooltip
           id='instagram-twitter'
           title='Follow us on twitter'
-          placement={window.innerWidth > 959 ? 'top' : 'left'}
+          placement={innerWidth > 959 ? 'top' : 'left'}
           classes={{ tooltip: classes.tooltip }}
         >
           <Button
@@ -80,7 +64,7 @@ function HeaderLinks({ ...props }) {
         <Tooltip
           id='instagram-facebook'
           title='Follow us on facebook'
-          placement={window.innerWidth > 959 ? 'top' : 'left'}
+          placement={innerWidth > 959 ? 'top' : 'left'}
           classes={{ tooltip: classes.tooltip }}
         >
           <Button
@@ -97,7 +81,7 @@ function HeaderLinks({ ...props }) {
         <Tooltip
           id='instagram-tooltip'
           title='Follow us on instagram'
-          placement={window.innerWidth > 959 ? 'top' : 'left'}
+          placement={innerWidth > 959 ? 'top' : 'left'}
           classes={{ tooltip: classes.tooltip }}
         >
           <Button

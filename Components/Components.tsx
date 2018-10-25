@@ -1,44 +1,16 @@
-import React from 'react'
-// nodejs library that concatenates classes
-import classNames from 'classnames'
-// react components for routing our app without refresh
-// import { Link } from "react-router-dom";
-// @material-ui/core components
-import withStyles from '@material-ui/core/styles/withStyles'
 import { WithStyles } from '@material-ui/core'
-// @material-ui/icons
-// core components
-import Header from './component/Header/Header'
-
-import Footer from './component/Footer/Footer.jsx'
-/*
-import Button from "./component/CustomButtons/Button.jsx";
-*/
-import GridContainer from './component/Grid/GridContainer.jsx'
-import GridItem from './component/Grid/GridItem.jsx'
-import Parallax from './component/Parallax/Parallax'
-// sections for this page
-
-import HeaderLinks from './component/Header/HeaderLinks'
-
-/*
-import SectionBasics from "./Sections/SectionBasics.jsx";
-import SectionNavbars from "./Sections/SectionNavbars.jsx";
-import SectionTabs from "./Sections/SectionTabs.jsx";
-import SectionPills from "./Sections/SectionPills.jsx";
-import SectionNotifications from "./Sections/SectionNotifications.jsx";
-import SectionTypography from "./Sections/SectionTypography.jsx";
-import SectionJavascript from "./Sections/SectionJavascript.jsx";
-import SectionCarousel from "./Sections/SectionCarousel.jsx";
-import SectionCompletedExamples from "./Sections/SectionCompletedExamples.jsx";
-import SectionLogin from "./Sections/SectionLogin.jsx";
-import SectionExamples from "./Sections/SectionExamples.jsx";
-import SectionDownload from "./Sections/SectionDownload.jsx";
-*/
-// import { container } from "assets/jss/material-kit-react.jsx";
-
+import withStyles from '@material-ui/core/styles/withStyles'
+import classNames from 'classnames'
+import React from 'react'
 import componentsStyles from './assets/jss/material-kit-react/views/components'
-
+import Footer from './component/Footer/Footer'
+import GridContainer from './component/Grid/GridContainer'
+import GridItem from './component/Grid/GridItem'
+import Header from './component/Header/Header'
+import HeaderLinks from './component/Header/HeaderLinks'
+import Parallax from './component/Parallax/Parallax'
+import SectionLogin from './Sections/SectionLogin'
+import TeamSection from './Sections/TeamSection'
 
 
 interface IProps extends WithStyles<typeof componentsStyles>  {}
@@ -60,7 +32,6 @@ class Components extends React.Component<IProps> {
         />
         <Parallax image={'/static/img/bg4.jpg'}>
           <div className={classes.container}>
-
             <GridContainer>
               <GridItem>
                 <div className={classes.brand}>
@@ -74,29 +45,8 @@ class Components extends React.Component<IProps> {
           </div>
         </Parallax>
         <div className={classNames(classes.main, classes.mainRaised)}>
-        {Array(40).fill(0).map((i, j) => <h3 key={j}> Ahoj</h3>)}
-
-        {/*
-          <SectionBasics />
-          <SectionNavbars />
-          <SectionTabs />
-          <SectionPills />
-          <SectionNotifications />
-          <SectionTypography />
-          <SectionJavascript />
-          <SectionCarousel />
-          <SectionCompletedExamples />
+          <TeamSection />
           <SectionLogin />
-          <GridItem md={12} className={classes.textCenter}>
-            <Link to={"/login-page"} className={classes.link}>
-              <Button color="primary" size="lg" simple>
-                View Login Page
-              </Button>
-            </Link>
-          </GridItem>
-          <SectionExamples />
-          <SectionDownload />
-          */}
         </div>
         <Footer />
       </div>

@@ -27,6 +27,7 @@ scp yarn.lock $SSH_HOST:$FRONT_PROD_PATH/yarn.lock
 scp package.json $SSH_HOST:$FRONT_PROD_PATH/package.json
 scp ecosystem.config.js $SSH_HOST:$FRONT_PROD_PATH/ecosystem.config.js
 scp next.config.js $SSH_HOST:$FRONT_PROD_PATH/next.config.js
+scp -r static $SSH_HOST:$FRONT_PROD_PATH
 scp -r .next $SSH_HOST:$FRONT_PROD_PATH
 echo "all necessary files are served to server"
 echo "Actual time: " $SECONDS "seconds"
