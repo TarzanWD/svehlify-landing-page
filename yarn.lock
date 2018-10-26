@@ -741,6 +741,12 @@
     "@types/react" "*"
     "@types/webpack" "*"
 
+"@types/react-syntax-highlighter@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@types/react-syntax-highlighter/-/react-syntax-highlighter-0.0.7.tgz#3f7c53a87fa03559df55278f638c5ed17114d090"
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-transition-group@^2.0.8":
   version "2.0.14"
   resolved "https://registry.yarnpkg.com/@types/react-transition-group/-/react-transition-group-2.0.14.tgz#afd0cd785a97f070b55765e9f9d76ff568269001"

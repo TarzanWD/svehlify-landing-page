@@ -252,7 +252,7 @@ class CoursesSection extends React.Component<IProps, IState> {
                   </Typography>
                   <Typography component='p'>
                     Kurz je určen pro všechny, které už nebaví programovat v
-                    technologíích, které byly vymyšleny za dob východního bloku.
+                    technologiích, které byly vymyšleny za dob východního bloku.
                     Ukážeme si nejmodernější bleeding edge stack,
                     který vám ulehčí každodenní práci a udělá vás zase šťastným.
                     Během školení projdeme

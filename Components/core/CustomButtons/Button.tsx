@@ -27,6 +27,7 @@ interface IProps extends WithStyles<typeof buttonStyle> {
   link?: boolean
   justIcon?: boolean
   className?: string
+  onClick?: (e: Event) => void
 }
 
 const RegularButton: React.SFC<IProps> = (props) => {

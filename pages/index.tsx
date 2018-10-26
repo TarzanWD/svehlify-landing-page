@@ -14,11 +14,98 @@ import CoursesSection from '../Components/Courses/CoursesSection'
 import SectionLogin from '../Components/Login/SectionLogin'
 import TeamSection from '../Components/Team/TeamSection'
 
-const mainPhotoSrc = '/static/img/bg2.jpg'
-// 'https://cdn.allwallpaper.in/wallpapers/1920x1200/14179/computers-money-programming-code-black-background-1920x1200-wallpaper.jpg'
-interface IProps extends WithStyles<typeof componentsStyles>  {}
+import SyntaxHighlighter from 'react-syntax-highlighter'
+import { docco } from 'react-syntax-highlighter/styles/hljs'
 
-class Index extends React.Component<IProps> {
+const codeString = `
+import {
+  GraphQLEnumType,
+  GraphQLInputObjectType,
+  GraphQLList,
+  GraphQLNonNull,
+} from 'graphql'
+
+enum OrderByKeyword {
+  ASC = 'ASC',
+  DESC = 'DESC',
+}
+const GraphQLAscDesc = new GraphQLEnumType({
+  name: 'OrderByKeyword',
+  values: {
+    [OrderByKeyword.ASC]: {
+      value: OrderByKeyword.ASC,
+    },
+    [OrderByKeyword.DESC]: {
+      value: OrderByKeyword.DESC,
+    },
+  },
+})
+
+
+export default (typeName, possibleOrderByKeys) => {
+  const GraphQlOrderByEnum = new GraphQLEnumType({
+    name: \`\$\{typeName\}PossibleKeys\`,
+    values: possibleOrderByKeys.reduce((pre, name) => {
+      pre[name] = {
+        value: name,
+      }
+      return pre
+    }, {})
+  })
+
+  const GraphQLOrderByType = new GraphQLInputObjectType({
+    name: typeName,
+    description: '',
+    fields: () => ({
+      order: {
+        type: new GraphQLNonNull(GraphQLAscDesc),
+        description: '',
+      },
+      key: {
+        type: new GraphQLNonNull(GraphQlOrderByEnum),
+        description: '',
+      },
+    })
+  })
+
+  return new GraphQLList(GraphQLOrderByType)
+}
+`
+
+const mainPhotoSrc = 'https://s.cafebazaar.ir/1/upload/screenshot/com.sadrooid15.Materialwallpapers5.jpg'
+
+// '/static/img/bg2.jpg'
+interface IProps extends WithStyles<typeof componentsStyles> {}
+interface IState {
+  currentCount: number
+  intervalId?: NodeJS.Timeout
+}
+
+class Index extends React.Component<IProps, IState> {
+
+  constructor(props: IProps) {
+    super(props)
+    this.state = {
+      intervalId: null,
+      currentCount: 20
+    }
+  }
+
+  public componentDidMount() {
+    const intervalId = setInterval(this.timer, 100)
+    // store intervalId in the state so it can be accessed later:
+    this.setState({ intervalId })
+  }
+
+  public componentWillUnmount() {
+    clearInterval(this.state.intervalId)
+  }
+
+  public timer = () => {
+    this.setState({ currentCount: this.state.currentCount + 1 })
+  }
+
+
   public render() {
     const { classes } = this.props
     return (
@@ -36,13 +123,25 @@ class Index extends React.Component<IProps> {
         <Parallax image={mainPhotoSrc}>
           <div className={classes.container}>
             <GridContainer>
-              <GridItem>
+              <GridItem xs={12} sm={12} md={4}>
                 <div className={classes.brand}>
                   <h1 className={classes.title}>Svehlify</h1>
                   <h3 className={classes.subtitle}>
                     Školení moderních webových technologií
                   </h3>
+                  <h4 className={classes.subtitle}>
+                    Našim cílem je omladit internet
+                  </h4>
                 </div>
+              </GridItem>
+              <GridItem xs={12} sm={12} md={8}>
+                <SyntaxHighlighter
+                  language='javascript'
+                  style={docco}
+                >{
+                  codeString.substring(0, this.state.currentCount)
+                }
+                </SyntaxHighlighter>
               </GridItem>
             </GridContainer>
           </div>
@@ -53,6 +152,14 @@ class Index extends React.Component<IProps> {
           <SectionLogin />
         </div>
         <Footer />
+        <style>{`
+          pre {
+            height: 250px;
+            font-size: 1.5rem;
+            font-weight: 500;
+            background: rgba(255, 255, 255, 0.5) !important;
+          }
+        `}</style>
       </div>
     )
   }
