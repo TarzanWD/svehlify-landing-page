@@ -157,7 +157,7 @@ class Index extends React.Component<IProps, IState> {
             height: 250px;
             font-size: 1.5rem;
             font-weight: 500;
-            background: rgba(255, 255, 255, 0.5) !important;
+            background: rgba(255, 255, 255, 0.7) !important;
           }
         `}</style>
       </div>
