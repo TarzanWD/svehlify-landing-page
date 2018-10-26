@@ -1,5 +1,8 @@
+import * as React from 'react'
 
-const imagesStyles = {
+interface IImagesStylesShape { [key: string]: React.CSSProperties }
+// enhancing other css for generationg classes
+const imagesStyles: IImagesStylesShape = {
   imgFluid: {
     maxWidth: '100%',
     height: 'auto',

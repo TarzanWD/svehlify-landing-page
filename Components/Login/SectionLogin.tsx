@@ -1,22 +1,18 @@
 import { WithStyles } from '@material-ui/core'
-import Icon from '@material-ui/core/Icon'
 import InputAdornment from '@material-ui/core/InputAdornment'
-// @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
 import Email from '@material-ui/icons/Email'
-// @material-ui/icons
 import People from '@material-ui/icons/People'
 import React from 'react'
-import loginStyle from '../component/Login/loginStyle'
-import Card from '../component/Card/Card'
-import CardBody from '../component/Card/CardBody'
-import CardFooter from '../component/Card/CardFooter'
-import CardHeader from '../component/Card/CardHeader'
-import Button from '../component/CustomButtons/Button'
-import CustomInput from '../component/CustomInput/CustomInput'
-// core components
-import GridContainer from '../component/Grid/GridContainer'
-import GridItem from '../component/Grid/GridItem'
+import loginStyle from './loginStyle'
+import Card from '../core/Card/Card'
+import CardBody from '../core/Card/CardBody'
+import CardFooter from '../core/Card/CardFooter'
+import CardHeader from '../core/Card/CardHeader'
+import Button from '../core/CustomButtons/Button'
+import CustomInput from '../core/CustomInput/CustomInput'
+import GridContainer from '../core/Grid/GridContainer'
+import GridItem from '../core/Grid/GridItem'
 
 interface IProps extends WithStyles<typeof loginStyle> {}
 
