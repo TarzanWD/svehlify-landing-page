@@ -24,6 +24,7 @@
     "react": "latest",
     "react-dom": "latest",
     "react-jss": "latest",
+    "react-syntax-highlighter": "^9.0.1",
     "tslint": "^5.11.0",
     "typescript": "^3.1.3"
   },

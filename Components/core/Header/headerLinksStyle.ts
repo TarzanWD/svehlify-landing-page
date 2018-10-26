@@ -1,7 +1,7 @@
 import { createStyles } from '@material-ui/core'
 import { Theme } from '@material-ui/core/styles/createMuiTheme'
-import { defaultFont } from '../../assets/jss/material-kit-react'
 import tooltip from '../../assets/jss/globalComponents/tooltipsStyle'
+import { defaultFont } from '../../assets/jss/material-kit-react'
 
 const headerLinksStyle = (theme: Theme) => createStyles({
   list: {

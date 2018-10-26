@@ -1,8 +1,8 @@
-import classNames from 'classnames'
-import React from 'react'
+import { WithStyles } from '@material-ui/core'
 import Button from '@material-ui/core/Button'
 import withStyles from '@material-ui/core/styles/withStyles'
-import { WithStyles } from '@material-ui/core'
+import classNames from 'classnames'
+import React from 'react'
 import buttonStyle from './buttonStyle'
 
 interface IProps extends WithStyles<typeof buttonStyle> {

@@ -1,18 +1,18 @@
-import { WithStyles, createStyles } from '@material-ui/core'
-import React from 'react'
-import Card from '../core/Card/Card'
-import Button from '../core/CustomButtons/Button'
-import GridContainer from '../core/Grid/GridContainer'
-import GridItem from '../core/Grid/GridItem'
+import { createStyles, WithStyles } from '@material-ui/core'
 import CardActionArea from '@material-ui/core/CardActionArea'
 import CardActions from '@material-ui/core/CardActions'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
-import Typography from '@material-ui/core/Typography'
-import { cardTitle, title } from '../assets/jss/material-kit-react'
-import imagesStyle from '../core/Image/imagesStyles'
-import withStyles from '@material-ui/core/styles/withStyles'
 import Modal from '@material-ui/core/Modal'
+import withStyles from '@material-ui/core/styles/withStyles'
+import Typography from '@material-ui/core/Typography'
+import React from 'react'
+import { cardTitle, title } from '../assets/jss/material-kit-react'
+import Card from '../core/Card/Card'
+import Button from '../core/CustomButtons/Button'
+import GridContainer from '../core/Grid/GridContainer'
+import GridItem from '../core/Grid/GridItem'
+import imagesStyle from '../core/Image/imagesStyles'
 
 const reactRelayGraphQL = 'static/img/courses/react-relay-gql.png'
 const nodejsSrc = 'static/img/courses/nodejs.png'
@@ -152,7 +152,7 @@ class CoursesSection extends React.Component<IProps, IState> {
               </ul>
 
               Pokud děláte advanced webové stránky pro náročené
-              klienty a chcete používat nejmodernější technologie 
+              klienty a chcete používat nejmodernější technologie
 
             </Typography>
           </div>

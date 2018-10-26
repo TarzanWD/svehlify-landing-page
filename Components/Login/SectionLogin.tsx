@@ -4,7 +4,6 @@ import withStyles from '@material-ui/core/styles/withStyles'
 import Email from '@material-ui/icons/Email'
 import People from '@material-ui/icons/People'
 import React from 'react'
-import loginStyle from './loginStyle'
 import Card from '../core/Card/Card'
 import CardBody from '../core/Card/CardBody'
 import CardFooter from '../core/Card/CardFooter'
@@ -13,6 +12,7 @@ import Button from '../core/CustomButtons/Button'
 import CustomInput from '../core/CustomInput/CustomInput'
 import GridContainer from '../core/Grid/GridContainer'
 import GridItem from '../core/Grid/GridItem'
+import loginStyle from './loginStyle'
 
 interface IProps extends WithStyles<typeof loginStyle> {}
 

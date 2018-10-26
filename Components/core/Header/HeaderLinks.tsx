@@ -8,7 +8,7 @@ import withStyles from '@material-ui/core/styles/withStyles'
 import Tooltip from '@material-ui/core/Tooltip'
 
 // @material-ui/icons
-import { Apps, CloudDownload, AccessibilityNew } from '@material-ui/icons'
+import { AccessibilityNew, CloudDownload } from '@material-ui/icons'
 
 // core components
 import Button from '../CustomButtons/Button'

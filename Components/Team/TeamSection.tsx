@@ -1,14 +1,14 @@
-import { WithStyles, createStyles } from '@material-ui/core'
+import { createStyles, WithStyles } from '@material-ui/core'
 import withStyles from '@material-ui/core/styles/withStyles'
 import classNames from 'classnames'
 import React from 'react'
+import { cardTitle, title } from '../assets/jss/material-kit-react'
 import Card from '../core/Card/Card'
 import CardBody from '../core/Card/CardBody'
 import CardFooter from '../core/Card/CardFooter'
 import Button from '../core/CustomButtons/Button'
 import GridContainer from '../core/Grid/GridContainer'
 import GridItem from '../core/Grid/GridItem'
-import { cardTitle, title } from '../assets/jss/material-kit-react'
 import imagesStyle from '../core/Image/imagesStyles'
 
 const teamStyle = () => createStyles({

@@ -1,8 +1,8 @@
 import { WithStyles } from '@material-ui/core'
 import withStyles from '@material-ui/core/styles/withStyles'
 import classNames from 'classnames'
-import React from 'react'
 import { isMobile } from 'is-mobile'
+import React from 'react'
 
 import parallaxStyle from './parallaxStyle'
 
