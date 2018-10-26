@@ -1,7 +1,5 @@
 import classNames from 'classnames'
 import React from 'react'
-
-// @material-ui/core components
 import Button from '@material-ui/core/Button'
 import withStyles from '@material-ui/core/styles/withStyles'
 import { WithStyles } from '@material-ui/core'
@@ -20,7 +18,7 @@ interface IProps extends WithStyles<typeof buttonStyle> {
     | 'google'
     | 'github'
     | 'transparent'
-  size?: 'sm' | 'lg'
+  size?: 'small' | 'medium' | 'large'
   simple?: boolean,
   round?: boolean
   fullWidth?: boolean
@@ -30,6 +28,7 @@ interface IProps extends WithStyles<typeof buttonStyle> {
   justIcon?: boolean
   className?: string
 }
+
 const RegularButton: React.SFC<IProps> = (props) => {
   const {
     classes,

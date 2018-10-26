@@ -45,6 +45,7 @@ class Header extends React.Component<IProps, IState> {
   public componentDidMount() {
     if (typeof window !== typeof undefined) {
       if (this.props.changeColorOnScroll) {
+        this.headerColorChange()
         window.addEventListener('scroll', this.headerColorChange)
       }
     }

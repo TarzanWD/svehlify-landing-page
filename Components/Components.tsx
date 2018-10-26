@@ -9,6 +9,8 @@ import GridItem from './component/Grid/GridItem'
 import Header from './component/Header/Header'
 import HeaderLinks from './component/Header/HeaderLinks'
 import Parallax from './component/Parallax/Parallax'
+// sections
+import CoursesSection from './Sections/Courses'
 import SectionLogin from './Sections/SectionLogin'
 import TeamSection from './Sections/TeamSection'
 
@@ -27,7 +29,7 @@ class Components extends React.Component<IProps> {
           fixed
           color='transparent'
           changeColorOnScroll={{
-            height: 400,
+            height: 150,
             color: 'white',
           }}
         />
@@ -38,7 +40,7 @@ class Components extends React.Component<IProps> {
                 <div className={classes.brand}>
                   <h1 className={classes.title}>Svehlify</h1>
                   <h3 className={classes.subtitle}>
-                    Školení bleeding edge technologí
+                    Školení moderních webových technologií
                   </h3>
                 </div>
               </GridItem>
@@ -46,6 +48,7 @@ class Components extends React.Component<IProps> {
           </div>
         </Parallax>
         <div className={classNames(classes.main, classes.mainRaised)}>
+          <CoursesSection />
           <TeamSection />
           <SectionLogin />
         </div>

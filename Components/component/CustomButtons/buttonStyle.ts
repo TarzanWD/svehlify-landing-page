@@ -263,7 +263,7 @@ const buttonStyle = () => createStyles({
     lineHeight: '1.333333',
     borderRadius: '0.2rem',
   },
-  sm: {
+  small: {
     padding: '0.40625rem 1.25rem',
     fontSize: '0.6875rem',
     lineHeight: '1.5',
@@ -306,7 +306,7 @@ const buttonStyle = () => createStyles({
         height: '32px',
       },
     },
-    '&$sm': {
+    '&$small': {
       'height': '30px',
       'minWidth': '30px',
       'width': '30px',

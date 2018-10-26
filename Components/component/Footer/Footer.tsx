@@ -30,24 +30,6 @@ const Footer = (props: IProps) =>  {
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
               <a
-                href='https://www.creative-tim.com/'
-                className={classes.block}
-                target='_blank'
-              >
-                Kuba Svehla
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href='https://www.creative-tim.com/presentation'
-                className={classes.block}
-                target='_blank'
-              >
-                About us
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a
                 href='https://twitter.com/KubaSvehla'
                 className={classes.block}
                 target='_blank'
@@ -57,11 +39,11 @@ const Footer = (props: IProps) =>  {
             </ListItem>
             <ListItem className={classes.inlineBlock}>
               <a
-                href='https://www.creative-tim.com/license'
+                href='https://github.com/Svehla'
                 className={classes.block}
                 target='_blank'
               >
-                Licenses
+                Github
               </a>
             </ListItem>
           </List>
@@ -70,13 +52,12 @@ const Footer = (props: IProps) =>  {
           &copy; {new Date().getFullYear()} , made with{' '}
           <Favorite className={classes.icon} /> by{' '}
           <a
-            href='https://www.creative-tim.com'
+            href='https://twitter.com/KubaSvehla'
             className={aClasses}
             target='_blank'
           >
-            Creative Tim
+            Kuba Švehla
           </a>{' '}
-          for a better web.
         </div>
       </div>
     </footer>

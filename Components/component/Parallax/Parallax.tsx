@@ -2,6 +2,7 @@ import { WithStyles } from '@material-ui/core'
 import withStyles from '@material-ui/core/styles/withStyles'
 import classNames from 'classnames'
 import React from 'react'
+import { isMobile } from 'is-mobile'
 
 import parallaxStyle from './parallaxStyle'
 
@@ -20,31 +21,34 @@ interface IState {
 class Parallax extends React.Component<IProps, IState> {
 
   private static getScrollTransform = () => {
-    const pageOffset = window.pageYOffset / 3
+    let pageOffset = 0
+    // validation for SSR
+    if (typeof window !== typeof undefined) {
+      pageOffset = window.pageYOffset / 3
+    }
     return `translate3d(0, ${pageOffset}px, 0)`
   }
 
   constructor(props) {
     super(props)
+    this.state = {
+      transform: Parallax.getScrollTransform()
+    }
+  }
 
-    if (typeof window !== typeof undefined) {
-      this.state = {
-        transform: Parallax.getScrollTransform()
-      }
+  public setCurrTransform = () => {
+    if (!isMobile()) {
+      this.setState({ transform: Parallax.getScrollTransform() })
     }
   }
 
   public componentDidMount() {
-    this.setState({ transform: Parallax.getScrollTransform() })
-    window.addEventListener('scroll', this.resetTransform)
+    this.setCurrTransform()
+    window.addEventListener('scroll', this.setCurrTransform)
   }
 
   public componentWillUnmount() {
-    window.removeEventListener('scroll', this.resetTransform)
-  }
-
-  public resetTransform = () => {
-    this.setState({ transform: Parallax.getScrollTransform() })
+    window.removeEventListener('scroll', this.setCurrTransform)
   }
 
   public render() {

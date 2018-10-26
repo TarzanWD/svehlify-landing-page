@@ -29,14 +29,14 @@ class SectionLogin extends React.Component<IProps> {
   public render() {
     const { classes } = this.props
     return (
-      <div className={classes.section}>
+      <div className={classes.section} id='registrace'>
         <div className={classes.container}>
           <GridContainer justify='center'>
             <GridItem xs={12} sm={12} md={4}>
               <Card>
                 <form className={classes.form}>
                   <CardHeader color='primary' className={classes.cardHeader}>
-                    <h4>Login</h4>
+                    <h4>Zaregisrujte se</h4>
                     <div className={classes.socialLine}>
                       <Button
                         justIcon
@@ -107,26 +107,9 @@ class SectionLogin extends React.Component<IProps> {
                         ),
                       }}
                     />
-                    <CustomInput
-                      labelText='Password'
-                      id='pass'
-                      formControlProps={{
-                        fullWidth: true,
-                      }}
-                      inputProps={{
-                        type: 'password',
-                        endAdornment: (
-                          <InputAdornment position='end'>
-                            <Icon className={classes.inputIconsColor}>
-                              lock_outline
-                            </Icon>
-                          </InputAdornment>
-                        ),
-                      }}
-                    />
                   </CardBody>
                   <CardFooter className={classes.cardFooter}>
-                    <Button simple color='primary' size='lg'>
+                    <Button simple color='primary' size='large'>
                       Get started
                     </Button>
                   </CardFooter>

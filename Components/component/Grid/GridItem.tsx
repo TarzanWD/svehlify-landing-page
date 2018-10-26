@@ -1,5 +1,5 @@
 import { createStyles, WithStyles } from '@material-ui/core'
-import Grid from '@material-ui/core/Grid'
+import Grid, { GridSize } from '@material-ui/core/Grid'
 import { Theme } from '@material-ui/core/styles/createMuiTheme'
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles'
@@ -17,8 +17,12 @@ const gridItemStyle = (theme: Theme) => createStyles({
 })
 
 interface IProps extends WithStyles<typeof gridItemStyle> {
-  children?: React.ReactNode,
-  className?: string,
+  children?: React.ReactNode
+  className?: string
+  xs?: GridSize
+  sm?: GridSize
+  md?: GridSize
+  lg?: GridSize
 }
 
 const GridItem: React.SFC<IProps> = (props) => {

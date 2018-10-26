@@ -79,6 +79,8 @@ class MyDocument extends Document<IProps>  {
             href='https://fonts.googleapis.com/css?family=Roboto:300,400,500'
           />
           <link rel='stylesheet' href='/static/base.css' />
+          <link rel='icon' type='image/x-icon' href='/static/img/favicon.ico' />
+          <link rel='shortcut icon' type='image/x-icon' href='/static/img/favicon.ico' />
         </Head>
         <body>
           <Main />

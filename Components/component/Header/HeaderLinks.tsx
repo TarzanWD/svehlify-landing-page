@@ -9,7 +9,7 @@ import withStyles from '@material-ui/core/styles/withStyles'
 import Tooltip from '@material-ui/core/Tooltip'
 
 // @material-ui/icons
-import { Apps, CloudDownload } from '@material-ui/icons'
+import { Apps, CloudDownload, AccessibilityNew } from '@material-ui/icons'
 
 // core components
 import Button from '../CustomButtons/Button'
@@ -25,22 +25,32 @@ const HeaderLinks = ({ ...props }) => {
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
           <Button
-            href='https://twitter.com/CreativeTim'
-            target='_blank'
+            href='#skoleni'
+            link
             color='transparent'
             className={classes.navLink}
           >
-            <CloudDownload className={classes.icons} /> Download
+            <CloudDownload className={classes.icons} /> Školení
           </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          href='https://www.creative-tim.com/product/material-kit-react'
+          href='#lide'
+          link
           color='transparent'
-          target='_blank'
           className={classes.navLink}
         >
-          <CloudDownload className={classes.icons} /> Download
+          <AccessibilityNew className={classes.icons} /> Lidé
+        </Button>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button
+          href='#registrace'
+          link
+          color='transparent'
+          className={classes.navLink}
+        >
+          <AccessibilityNew className={classes.icons} /> Registrace
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -51,6 +61,7 @@ const HeaderLinks = ({ ...props }) => {
           classes={{ tooltip: classes.tooltip }}
         >
           <Button
+            link
             href='https://twitter.com/CreativeTim'
             target='_blank'
             color='transparent'
@@ -69,6 +80,7 @@ const HeaderLinks = ({ ...props }) => {
         >
           <Button
             color='transparent'
+            link
             href='https://www.facebook.com/CreativeTim'
             target='_blank'
             className={classes.navLink}
@@ -86,6 +98,7 @@ const HeaderLinks = ({ ...props }) => {
         >
           <Button
             color='transparent'
+            link
             href='https://www.instagram.com/CreativeTimOfficial'
             target='_blank'
             className={classes.navLink}

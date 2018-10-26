@@ -1,14 +1,58 @@
-import { WithStyles } from '@material-ui/core'
+import { WithStyles, createStyles } from '@material-ui/core'
 import withStyles from '@material-ui/core/styles/withStyles'
 import classNames from 'classnames'
 import React from 'react'
-import teamStyle from '../component/Team/teamStyle'
 import Card from '../component/Card/Card'
 import CardBody from '../component/Card/CardBody'
 import CardFooter from '../component/Card/CardFooter'
 import Button from '../component/CustomButtons/Button'
 import GridContainer from '../component/Grid/GridContainer'
 import GridItem from '../component/Grid/GridItem'
+import { cardTitle, title } from '../assets/jss/material-kit-react'
+import imagesStyle from '../assets/jss/globalComponents/imagesStyles'
+
+const teamStyle = () => createStyles({
+  section: {
+    padding: '70px 0',
+    textAlign: 'center',
+  },
+  title: {
+    ...title,
+    marginBottom: '1rem',
+    marginTop: '30px',
+    minHeight: '32px',
+    textDecoration: 'none',
+  },
+  ...imagesStyle,
+  itemGrid: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
+  cardTitle,
+  smallTitle: {
+    color: '#6c757d',
+  },
+  description: {
+    color: '#999',
+  },
+  justifyCenter: {
+    justifyContent: 'center !important',
+  },
+  socials: {
+    marginTop: '0',
+    width: '100%',
+    transform: 'none',
+    left: '0',
+    top: '0',
+    height: '100%',
+    lineHeight: '41px',
+    fontSize: '20px',
+    color: '#999',
+  },
+  margin5: {
+    margin: '5px',
+  },
+})
 
 const team1 = 'static/img/faces/1.jpg' // avatar.jpg'
 const team2 = 'static/img/faces/2.jpg' // christian.jpg'
@@ -24,26 +68,27 @@ const TeamSection = (props: IProps) => {
     classes.imgFluid
   )
   return (
-    <div className={classes.section}>
-      <h2 className={classes.title}>Here is our team</h2>
+    <div className={classes.section} id='lide'>
+      <h2 className={classes.title}>Náš tým</h2>
       <div>
         <GridContainer>
-          <GridItem xs={12} sm={12} md={4}>
+          <GridItem xs={12} sm={6} md={4}>
             <Card plain>
-              <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
+              <GridItem xs={12} sm={6} md={6} className={classes.itemGrid}>
                 <img src={team1} alt='...' className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                Šve Hlakuba
+                Kuba Švehla
                 <br />
-                <small className={classes.smallTitle}>Project lead manager</small>
+                <small className={classes.smallTitle}>Školení backend</small>
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                  You can write here details about one of your team members.
-                  You can give more details about what they do. Feel free to
-                  add some <a href='#pablo'>links</a> for people to be able to
-                  follow them outside the site.
+                  Od svých 15let jsem se začal zajímat o svět programování.
+                  Jako každý správný Frontendista jsem začal s 350 stránkovou
+                  knížkou jQuery a async echování HTML v PHP šablonách.<br />
+                  Postupem času jsem přešel na nodejs u které jsem zůstal už více
+                  jak 5 let a tím začala dlouhá láska mezi mnou a Javascriptem.
                 </p>
               </CardBody>
               <CardFooter className={classes.justifyCenter}>
@@ -71,22 +116,23 @@ const TeamSection = (props: IProps) => {
               </CardFooter>
             </Card>
           </GridItem>
-          <GridItem xs={12} sm={12} md={4}>
+          <GridItem xs={12} sm={6} md={4}>
             <Card plain>
-              <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
+              <GridItem xs={12} sm={6} md={6} className={classes.itemGrid}>
                 <img src={team2} alt='...' className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                Kuba Svehla
+                Kuba Švehla
                 <br />
-                <small className={classes.smallTitle}>CEO</small>
+                <small className={classes.smallTitle}>Školení frontend</small>
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                  You can write here details about one of your team members.
-                  You can give more details about what they do. Feel free to
-                  add some <a href='#pablo'>links</a> for people to be able to
-                  follow them outside the site.
+                  Od svých 15let jsem se začal zajímat o svět programování.
+                  Jako každý správný Frontendista jsem začal s 350 stránkovou
+                  knížkou jQuery a async echování HTML v PHP šablonách.<br />
+                  Postupem času jsem přešel na nodejs u které jsem zůstal už více
+                  jak 5 let a tím začala dlouhá láska mezi mnou a Javascriptem.
                 </p>
               </CardBody>
               <CardFooter className={classes.justifyCenter}>
@@ -107,22 +153,23 @@ const TeamSection = (props: IProps) => {
               </CardFooter>
             </Card>
           </GridItem>
-          <GridItem xs={12} sm={12} md={4}>
+          <GridItem xs={12} sm={6} md={4}>
             <Card plain>
-              <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
+              <GridItem xs={12} sm={6} md={6} className={classes.itemGrid}>
                 <img src={team3} alt='...' className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                Švehl Ajakub
+                Kuba Švehla
                 <br />
-                <small className={classes.smallTitle}>CTO</small>
+                <small className={classes.smallTitle}>Kodér a občasný grafik</small>
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                  You can write here details about one of your team members.
-                  You can give more details about what they do. Feel free to
-                  add some <a href='#pablo'>links</a> for people to be able to
-                  follow them outside the site.
+                  Od svých 15let jsem se začal zajímat o svět programování.
+                  Jako každý správný Frontendista jsem začal s 350 stránkovou
+                  knížkou jQuery a async echování HTML v PHP šablonách.<br />
+                  Postupem času jsem přešel na nodejs u které jsem zůstal už více
+                  jak 5 let a tím začala dlouhá láska mezi mnou a Javascriptem.
                 </p>
               </CardBody>
               <CardFooter className={classes.justifyCenter}>
