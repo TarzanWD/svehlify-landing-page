@@ -13,12 +13,21 @@ import Parallax from '../Components/core/Parallax/Parallax'
 import CoursesSection from '../Components/Courses/CoursesSection'
 import SectionLogin from '../Components/Login/SectionLogin'
 import TeamSection from '../Components/Team/TeamSection'
-
-import SyntaxHighlighter from 'react-syntax-highlighter'
+/*
+import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/light"
+// import SyntaxHighlighter from 'react-syntax-highlighter'
 import { docco } from 'react-syntax-highlighter/styles/hljs'
+import js from 'react-syntax-highlighter/languages/hljs/javascript';
+import { dark } from 'react-syntax-highlighter/styles/prism';
 
-const codeString = `
-import {
+registerLanguage('javascript', js)
+*/
+import SyntaxHighlighter from 'react-syntax-highlighter/prism';
+import { dark } from 'react-syntax-highlighter/styles/prism';
+
+
+const codeString =
+`import {
   GraphQLEnumType,
   GraphQLInputObjectType,
   GraphQLList,
@@ -102,7 +111,7 @@ class Index extends React.Component<IProps, IState> {
   }
 
   public timer = () => {
-    this.setState({ currentCount: this.state.currentCount + 1 })
+    this.setState({ currentCount: this.state.currentCount + 2 })
   }
 
 
@@ -137,7 +146,7 @@ class Index extends React.Component<IProps, IState> {
               <GridItem xs={12} sm={12} md={8}>
                 <SyntaxHighlighter
                   language='javascript'
-                  style={docco}
+                  style={dark}
                 >{
                   codeString.substring(0, this.state.currentCount)
                 }
@@ -155,9 +164,10 @@ class Index extends React.Component<IProps, IState> {
         <style>{`
           pre {
             height: 250px;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 500;
-            background: rgba(255, 255, 255, 0.7) !important;
+            background: rgba(0, 0, 0, 0.7) !important;
+            border: 0px  !important;
           }
         `}</style>
       </div>
