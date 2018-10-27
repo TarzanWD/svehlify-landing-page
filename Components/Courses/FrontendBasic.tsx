@@ -9,7 +9,7 @@ const cardMediaStyle = {
   padding: '70px 0',
   textAlign: 'center',
 }
-interface IProps {ą
+interface IProps {
   classes?: any
 }
 export default ({ classes }: IProps) => (

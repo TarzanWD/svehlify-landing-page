@@ -1,7 +1,8 @@
 import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
 import * as React from 'react'
-
+import PointList from './PointList'
+import Button from '@material-ui/core/Button'
 
 const cardMediaStyle = {
   padding: '70px 0',
@@ -19,30 +20,56 @@ export default ({ classes }: IProps) => (
     />
     <br />
     <Typography variant='h4' id='modal-title'>
-      Front advanced
+      React GraphQL ninja
     </Typography>
-    Máte už zkušenosti s REST-API a reactem a nebaví vás pořád psát
-    nudné redux story a chcete se ponořit do nového pohledu na svět
-    <ul>
-      <li>Představení moderních SPA aplikací</li>
-      <li>představíme si základy GraphQL</li>
-      <li>Porovnáme typovou analýzu kódu pomocí: typescipt / flow / javascript</li>
-      <li>Představíme si základní stavové kontejnery graphql (apollo a relay)</li>
-      <li>porovnáme nejpoužívanější knihovny na zpracování a cachování graphql</li>
-      <li>Napíšeme si jednoduchou aplikaci na ukázíní graphql best practise</li>
-      <li>představení code splittingu pro vělké js aplikace</li>
-      <li>ukázání ušetření trafficu a cachování pomocí graphQl</li>
-      <li>Vytvoření automatické statické analýzy pomocí API modelu</li>
-      <li>celou aplikaci pojedeme se 100% optimistic UI,
-        aby nebyla nejmenší prodelav mezi serverem a klientem</li>
-      <li>Představíme si přístup ke stylování: CSS in JS https://material-ui.com/demos/bottom-navigation/</li>
-      <li>Pro zvýšení efektivity budeme pro design
-        design naší aplikace používat Material.ui</li>
-      <li>Nasazení a rozjetí naší aplikace na Heroku </li>
-    </ul>
+    <Typography style={{ marginBottom: '20px' }}>
+      Máte už zkušenosti s REST-API i reactem a přestává vás bavit
+      monotonní práce psaní nudných redux storů a chcete se zase cítit jako v době,
+      kdy jste spustili svůj první for cyklus, nebo dali do produkce první aplikaci?
+    </Typography>
 
-    Pokud děláte advanced webové stránky pro náročené
-    klienty a chcete používat nejmodernější technologie
+    <Typography variant='h5'>Kurz obnáší</Typography>
+    <PointList
+      dataList={[
+        'Představení moderních SPA aplikací a frameworků (zaměření na GraphQL)',
+        'Ukážeme si základy GraphQL',
+        'Porovnáme typovou analýzu kódu pomocí nástrojů: typescipt / flow',
+        'Ukážeme si best practise pro odstranění runtime chyb (nebudou to testy, přísahám)',
+        `Představíme si základní stavové kontejnery graphql (apollo a relay)`,
+        `Napíšeme si jednoduchou aplikaci na ukázání graphql best practise`,
+        'ukázání ušetření trafficu a cachování pomocí graphQl',
+        `Aplikaci napojíme na reálný backend`,
+        `Nasazení aplikace na internet`
+      ]}
+    />
+
+    <Typography  variant='h5'>CSS stylování a design</Typography>
+    <PointList
+      dataList={[
+        'Představíme si nejmoderněší přístup ke stylování: CSS in JS',
+        'Pro zvýšení efektivity budeme pro design design naší aplikace používat Material.ui',
+        `Aby jsme neztráceli čas designováním webu od nuly,
+        budeme používat nejmodernější UI (uživatelské rozhraní) knihovnu material.UI`
+      ]}
+    />
+
+
+    <Typography variant='h5'>Co budete potřebovat?</Typography>
+    <PointList
+      dataList={[
+        'Základní znalost javascriptu',
+        'Základní znalost react.js',
+        'Znát základy HTML/CSS',
+        `Vlastní notebook`
+      ]}
+    />
+    <Button variant='contained' color='primary'>
+      Objednat
+    </Button>
+    <Button variant='contained' color='action' >
+      Zavřít
+    </Button>
+
 
   </div>
 )

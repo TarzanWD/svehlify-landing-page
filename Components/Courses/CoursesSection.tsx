@@ -14,15 +14,18 @@ import Button from '../core/CustomButtons/Button'
 import GridContainer from '../core/Grid/GridContainer'
 import GridItem from '../core/Grid/GridItem'
 import imagesStyle from '../core/Image/imagesStyles'
-import BackendAdvanced from './BackendAdvanced'
-import BackendBasic from './BackendBasic'
+import CICDCourse from './CICDCourse'
+import BackendBasic from './BackendCourse'
 import FrontendAdvanced from './FrontendAdvanced'
 import FrontendBasic from './FrontendBasic'
 
 const imageFrontendBasic = 'static/img/courses/imageFrontendBasic.png'
 const imageFrontendAdvanced = 'static/img/courses/imageFrontendAdvanced.png'
 const imageBackendBasic = 'static/img/courses/imageBackendBasic.png'
-const imageBackendAdvanced = 'static/img/courses/imageBackendAdvanced.png'
+const customCompany = 'static/img/courses/customCompany.png'
+const CICD = 'static/img/courses/CICD.png'
+const nodeBackend = 'static/img/courses/nodeBackend.png'
+const awsImgSrc = 'static/img/courses/aws.png'
 
 const coursesStyle = (theme) => createStyles({
   section: {
@@ -86,7 +89,7 @@ const coursesStyle = (theme) => createStyles({
 
 
 interface IProps extends WithStyles<typeof coursesStyle> {}
-type ModalNames = 'FrontendBasic' | 'FrontendAdvanced' | 'BackendBasic' | 'BackendAdvanced'
+type ModalNames = 'FrontendBasic' | 'FrontendAdvanced' | 'BackendBasic' | 'CICDCourse'
 interface IState {
   openModal: null | ModalNames
 }
@@ -126,8 +129,8 @@ class CoursesSection extends React.Component<IProps, IState> {
                   return <FrontendAdvanced />
                 case 'BackendBasic':
                   return <BackendBasic />
-                case 'BackendAdvanced':
-                  return <BackendAdvanced />
+                case 'CICDCourse':
+                  return <CICDCourse />
                 default:
                   return null
               }
@@ -159,7 +162,7 @@ class CoursesSection extends React.Component<IProps, IState> {
         <GridContainer>
           <GridItem xs={12} sm={12} md={6} lg={4}>
             <Card className={classes.card}>
-              <CardActionArea>
+              <CardActionArea onClick={this.openModel('FrontendBasic')}>
                 <CardMedia
                   className={classes.media}
                   image={imageFrontendBasic}
@@ -167,7 +170,7 @@ class CoursesSection extends React.Component<IProps, IState> {
                 />
                 <CardContent>
                   <Typography gutterBottom variant='h5' component='h2'>
-                    Základy moderních webových aplikací
+                    Frontend react Genin
                   </Typography>
                   <Typography component='p'>
                     Kurz je určen pro všechny co chtějí začít s programováním webových aplikací.
@@ -176,8 +179,8 @@ class CoursesSection extends React.Component<IProps, IState> {
                   </Typography>
                 </CardContent>
               </CardActionArea>
-              <CardActions>
-                <Button size='small' color='primary' onClick={this.openModel('FrontendBasic')}>
+              <CardActions style={{ bottom: 0, position: 'absolute '}}>
+                <Button color='primary' onClick={this.openModel('FrontendBasic')}>
                   Více informací
                 </Button>
               </CardActions>
@@ -186,7 +189,7 @@ class CoursesSection extends React.Component<IProps, IState> {
           <GridItem xs={12} sm={12} md={6} lg={4}>
 
             <Card className={classes.card}>
-              <CardActionArea>
+              <CardActionArea onClick={this.openModel('FrontendAdvanced')}>
                 <CardMedia
                   className={classes.media}
                   image={imageFrontendAdvanced}
@@ -194,19 +197,17 @@ class CoursesSection extends React.Component<IProps, IState> {
                 />
                 <CardContent>
                   <Typography gutterBottom variant='h5' component='h2'>
-                    FRONTEND GraphQL ULTRA frontend Ninja
+                  React GraphQL ninja
                   </Typography>
                   <Typography component='p'>
-                    Kurz je určen pro všechny, které už nebaví programovat v
-                    technologiích, které byly vymyšleny za dob východního bloku.
-                    Ukážeme si nejmodernější bleeding edge stack,
-                    který vám ulehčí každodenní práci a udělá vás zase šťastným.
-                    Během školení projdeme
+                    Máte už zkušenosti s REST-API i reactem a přestává vás bavit
+                    monotonní práce psaní nudných redux storů a chcete se zase cítit jako v době,
+                    kdy jste spustili svůj první for cyklus...
                   </Typography>
                 </CardContent>
               </CardActionArea>
-              <CardActions>
-                <Button size='small' color='primary' onClick={this.openModel('FrontendAdvanced')}>
+              <CardActions style={{ bottom: 0, position: 'absolute '}}>
+                <Button color='primary' onClick={this.openModel('FrontendAdvanced')}>
                   Více informací
                 </Button>
               </CardActions>
@@ -215,43 +216,44 @@ class CoursesSection extends React.Component<IProps, IState> {
 
           <GridItem xs={12} sm={12} md={6} lg={4}>
             <Card className={classes.card}>
-              <CardActionArea>
+              <CardActionArea onClick={this.openModel('BackendBasic')}>
                 <CardMedia
                   className={classes.media}
-                  image={imageBackendBasic}
+                  image={nodeBackend}
                   title='Contemplative Reptile'
                 />
                 <CardContent>
                   <Typography gutterBottom variant='h5' component='h2'>
-                    První krůčky s nodejs & GraphQL na serveru
+                    Nodejs REST-API/GraphQL backend
                   </Typography>
                   <Typography component='p'>
                     Kurz je určen pro všechny, které už nebaví programovat v
                     technologiích, které byly vymyšleny za dob východního bloku.
                     Ukážeme si nejmodernější bleeding edge stack,
                     který vám ulehčí každodenní práci a udělá vás zase šťastným.
-                    Během školení projdeme
+                    Během školení projdeme...
                   </Typography>
                 </CardContent>
               </CardActionArea>
-              <CardActions>
-                <Button size='small' color='primary' onClick={this.openModel('BackendBasic')}>
+              <CardActions style={{ bottom: 0, position: 'absolute '}}>
+                <Button color='primary' onClick={this.openModel('BackendBasic')}>
                   Více informací
                 </Button>
               </CardActions>
             </Card>
           </GridItem>
+
           <GridItem xs={12} sm={12} md={6} lg={4}>
             <Card className={classes.card}>
-              <CardActionArea>
+              <CardActionArea onClick={this.openModel('CICDCourse')}>
                 <CardMedia
                   className={classes.media}
-                  image={imageBackendAdvanced}
+                  image={awsImgSrc}
                   title='Contemplative Reptile'
                 />
                 <CardContent>
                   <Typography gutterBottom variant='h5' component='h2'>
-                    Přeorientujte své nudné REST-API na GraphQL
+                    AWS Deploy Master
                   </Typography>
                   <Typography component='p'>
                     Kurz je určen pro všechny, které už nebaví programovat
@@ -260,10 +262,67 @@ class CoursesSection extends React.Component<IProps, IState> {
                     bleeding edge stack, který vám ulehčí
                     každodenní práci a udělá vás zase šťastným.
                   </Typography>
+
                 </CardContent>
               </CardActionArea>
-              <CardActions>
-                <Button size='small' color='primary' onClick={this.openModel('BackendAdvanced')}>
+              <CardActions style={{ bottom: 0, position: 'absolute '}}>
+                <Button color='primary' onClick={this.openModel('CICDCourse')}>
+                  Více informací
+                </Button>
+              </CardActions>
+            </Card>
+          </GridItem>
+
+          <GridItem xs={12} sm={12} md={6} lg={4}>
+            <Card className={classes.card}>
+              <CardActionArea onClick={this.openModel('BackendBasic')}>
+                <CardMedia
+                  className={classes.media}
+                  image={customCompany}
+                  title='Contemplative Reptile'
+                />
+                <CardContent>
+                  <Typography gutterBottom variant='h5' component='h2'>
+                    Custom školení pro firmy
+                  </Typography>
+                  <Typography component='p'>
+                    Nabízíme custom školení naškálované přímo pro firmy
+                    Nabízíme custom školení naškálované přímo pro firmy
+                    Nabízíme custom školení naškálované přímo pro firmy
+                    Nabízíme custom školení naškálované přímo pro firmy
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions style={{ bottom: 0, position: 'absolute '}}>
+                <Button color='primary' onClick={this.openModel('BackendBasic')}>
+                  Více informací
+                </Button>
+              </CardActions>
+            </Card>
+          </GridItem>
+
+          <GridItem xs={12} sm={12} md={6} lg={4}>
+            <Card className={classes.card}>
+              <CardActionArea onClick={this.openModel('CICDCourse')}>
+                <CardMedia
+                  className={classes.media}
+                  image={CICD}
+                  title='Contemplative Reptile'
+                />
+                <CardContent>
+                  <Typography gutterBottom variant='h5' component='h2'>
+                    CI/CD Sempai
+                  </Typography>
+                  <Typography component='p'>
+                    Kurz je určen pro ty z vás kdo chtějí nahlednout za oponu
+                    těchto dvou v dnešní době buzzwordu. A chtěji testovat a nasazovat
+                    aplikace pouhým kliknutím. Dozvíte se zde něco málo o
+                    různých způsobech testování. 
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions style={{ bottom: 0, position: 'absolute '}}>
+                <Button color='primary' onClick={this.openModel('CICDCourse')}>
                   Více informací
                 </Button>
               </CardActions>

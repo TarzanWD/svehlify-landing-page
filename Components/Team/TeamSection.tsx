@@ -54,9 +54,9 @@ const teamStyle = () => createStyles({
   },
 })
 
-const team1 = 'static/img/faces/1.jpg' // avatar.jpg'
-const team2 = 'static/img/faces/2.jpg' // christian.jpg'
-const team3 = 'static/img/faces/3.jpg' // kendall.jpg'
+const team1 = 'static/img/ourTeam/svehla_front.jpg'
+const team2 = 'static/img/ourTeam/filip_dobrovolny.jpg'
+const team3 = 'static/img/ourTeam/svehla_backend.jpg'
 
 interface IProps extends WithStyles<typeof teamStyle> {}
 
@@ -80,15 +80,13 @@ const TeamSection = (props: IProps) => {
               <h4 className={classes.cardTitle}>
                 Kuba Švehla
                 <br />
-                <small className={classes.smallTitle}>Školení backend</small>
+                <small className={classes.smallTitle}>Front-end developer</small>
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                  Od svých 15let jsem se začal zajímat o svět programování.
-                  Jako každý správný Frontendista jsem začal s 350 stránkovou
-                  knížkou jQuery.
-                  Postupem času jsem přešel na nodejs u které jsem zůstal už více
-                  než 5 let a tím začala dlouhá láska mezi mnou a javascriptem.
+                Za poslední roky jsem prošel mnoho projektů od server render
+                jade šablon v nodejs, až k relay graphql stacku podobnému tomu,
+                který používá a vývíjí například facebook.com
                 </p>
               </CardBody>
               <CardFooter className={classes.justifyCenter}>
@@ -122,15 +120,15 @@ const TeamSection = (props: IProps) => {
                 <img src={team2} alt='...' className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                Kuba Švehla
+                Filip Dobrovolný
                 <br />
-                <small className={classes.smallTitle}>Školení frontend</small>
+                <small className={classes.smallTitle}>DevOps/Linux</small>
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                Za poslední roky jsem prošel mnoho projektů od server render jade šablon
-                v nodejs, až k relay graphql stacku podobnému tomu,
-                který používá a vývíjí například facebook.com
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
                 </p>
               </CardBody>
               <CardFooter className={classes.justifyCenter}>
@@ -159,15 +157,15 @@ const TeamSection = (props: IProps) => {
               <h4 className={classes.cardTitle}>
                 Kuba Švehla
                 <br />
-                <small className={classes.smallTitle}>Kodér a občasný grafik</small>
+                <small className={classes.smallTitle}>Backend developer</small>
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                Postupně jsem testoval frontend frameworky,
-                až jsem našel nejlepší řešení pro věčné problémy
-                ve vue.js a reactu, který na většině projektů používáme dodnes.
-                Mezi moji posedlost patří 100% otypovaný
-                kód a proto nedám dopustit na typovou analýzu pomcí typescriptu, nebo flow.
+                  Od svých 15let jsem se začal zajímat o svět programování.
+                  Jako každý správný Frontendista jsem začal s 350 stránkovou
+                  knížkou jQuery.
+                  Postupem času jsem přešel na nodejs u které jsem zůstal už více
+                  než 5 let a tím začala dlouhá láska mezi mnou a javascriptem.
                 </p>
               </CardBody>
               <CardFooter className={classes.justifyCenter}>
