@@ -139,19 +139,31 @@ class CoursesSection extends React.Component<IProps, IState> {
         </Modal>
 
         <div className={classes.aboutUs}>
-          <h1 className={classes.title}>Našim cílem je omladit internet</h1>
-          <h2 className={classes.title}>A vracíme zábavu v programování</h2>
-          <h3 className={classes.title}>Skupina lidí, co dělá věci</h3>
-          <Typography>
-            Supplemental actions within the card are explicitly
-            called out using icons, text, and UI controls,
-            typically placed at the bottom of the card.
-            Here's an example of a media control card.
-            Supplemental actions within the card are explicitly
-            called out using icons, text, and UI controls,
-            typically placed at the bottom of the card.
-            Here's an example of a media control card.
+          <Typography variant='h4'>
+            Kdo jsme?
           </Typography>
+          <Typography style={{ marginBottom: '20px' }}>
+            Jsme skupina lidí, kteri si v životě prošli práci na enterprise projektech a chtějí
+            zachránit lidstvo a vzbouřit programový k tomu, ať se do starého enterprise
+            kodu už nový nepřidává a věci se upravují a budují znova a čištěji
+          </Typography>
+
+
+          <Typography variant='h5'>
+            Školíme jen věci, které reálně používáme v produkci
+          </Typography>
+          <Typography style={{ marginBottom: '20px' }}>
+            Technologie které skolime využívají statisíce firem...
+            Například Facebook airbnb github apple a milion dalších firema
+            pomáhají jim k ladnemu chodu.
+          </Typography>
+
+          <Typography style={{ marginBottom: '20px' }}>
+            Všechny technologie které učíme lze integrovat
+            do vašeho již rozděleného systému a nemusíte se
+            bát zpětné nekompatibily
+          </Typography>
+
           <h3 className={classes.title}>Další věci</h3>
           <Typography>
             Začali jsme teprve 2018 ale jsme hustí
@@ -283,13 +295,14 @@ class CoursesSection extends React.Component<IProps, IState> {
                 />
                 <CardContent>
                   <Typography gutterBottom variant='h5' component='h2'>
-                    Custom školení pro firmy
+                    školení & Firemní konzulace
                   </Typography>
                   <Typography component='p'>
-                    Nabízíme custom školení naškálované přímo pro firmy
-                    Nabízíme custom školení naškálované přímo pro firmy
-                    Nabízíme custom školení naškálované přímo pro firmy
-                    Nabízíme custom školení naškálované přímo pro firmy
+                    Školení na míru
+                    Nabízíme školení upravené přesně podle
+                    firemních business požadavků. Na téma konzultacím a
+                    školení se lze blíže domluvit a uzpůsobit.
+                    Délka a cena školení se odvíjí podle domluvy.
                   </Typography>
                 </CardContent>
               </CardActionArea>

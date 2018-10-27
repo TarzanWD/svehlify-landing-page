@@ -36,7 +36,7 @@ class Index extends React.Component<IProps, void> {
     return (
       <div>
         <Header
-          brand='Javascript školení na míru'
+          brand='Školení & Firemní konzulace'
           rightLinks={<HeaderLinks />}
           fixed
           color='transparent'
@@ -52,11 +52,8 @@ class Index extends React.Component<IProps, void> {
                 <div className={classes.brand}>
                   <h1 className={classes.title}>Svehlify</h1>
                   <h3 className={classes.subtitle}>
-                    Školení moderních webových technologií
+                    Nejmodernější Webové technologie
                   </h3>
-                  <h4 className={classes.subtitle}>
-                    Našim cílem je omladit internet
-                  </h4>
                 </div>
 
               </GridItem>
