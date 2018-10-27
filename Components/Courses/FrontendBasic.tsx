@@ -1,14 +1,15 @@
-import * as React from 'react'
-import Typography from '@material-ui/core/Typography'
+import Button from '@material-ui/core/Button'
 import CardMedia from '@material-ui/core/CardMedia'
+import Typography from '@material-ui/core/Typography'
+import * as React from 'react'
+import PointList from './PointList'
 
 const modalImgSrc = 'static/img/courses/react-relay-gql.png'
-
 const cardMediaStyle = {
   padding: '70px 0',
   textAlign: 'center',
 }
-interface IProps {
+interface IProps {ą
   classes?: any
 }
 export default ({ classes }: IProps) => (
@@ -20,29 +21,57 @@ export default ({ classes }: IProps) => (
     />
     <br />
     <Typography variant='h4' id='modal-title'>
-      Frontend basic
+      Základy moderních webových aplikací
     </Typography>
-    Máte už zkušenosti s REST-API a reactem a nebaví vás pořád psát
-    nudné redux story a chcete se ponořit do nového pohledu na svět
-    <ul>
-      <li>Představení moderních SPA aplikací</li>
-      <li>představíme si základy GraphQL</li>
-      <li>Porovnáme typovou analýzu kódu pomocí: typescipt / flow / javascript</li>
-      <li>Představíme si základní stavové kontejnery graphql (apollo a relay)</li>
-      <li>porovnáme nejpoužívanější knihovny na zpracování a cachování graphql</li>
-      <li>Napíšeme si jednoduchou aplikaci na ukázíní graphql best practise</li>
-      <li>představení code splittingu pro vělké js aplikace</li>
-      <li>ukázání ušetření trafficu a cachování pomocí graphQl</li>
-      <li>Vytvoření automatické statické analýzy pomocí API modelu</li>
-      <li>celou aplikaci pojedeme se 100% optimistic UI,
-        aby nebyla nejmenší prodelav mezi serverem a klientem</li>
-      <li>Představíme si přístup ke stylování: CSS in JS https://material-ui.com/demos/bottom-navigation/</li>
-      <li>Pro zvýšení efektivity budeme pro design
-        design naší aplikace používat Material.ui</li>
-      <li>Nasazení a rozjetí naší aplikace na Heroku </li>
-    </ul>
+    <Typography style={{ marginBottom: '20px' }}>
+      Kurz je určen pro všechny co chtějí začít s programováním webových aplikací.
+      Zaměříme se na frontend single page aplikace, které dnes použíají firmy,
+      jako Facebook, airBnb, spotify nebo kiwi.
+      Uděláme průřez nejlepšími a nejpoužívanějšími javascriptovými technologiemi,
+      frameworky a transpilery.
+      Uvidíme, jak integrovat naši práci do již hotového projektu
+    </Typography>
 
-    Pokud děláte advanced webové stránky pro náročené
-    klienty a chcete používat nejmodernější technologie
+    <Typography variant='h5'>Kurz obnáší</Typography>
+    <PointList
+      dataList={[
+        'Architektura modenrních SPA aplikací (BE vs FE)',
+        'Představení moderních frameworků',
+        'Nainstalování a vysvětlení zákládů k nodejs',
+        'Představení nejpoužívanějších react buildů (CreateReactApp & next.js)',
+        `Představení nejpoužívanějších react buildů (CreateReactApp & next.js)`,
+        `Napíšeme si jednoduchou aplikaci na demonstraci nejosvěčenějších
+        přístupů, best practise a stavových kontejnerů`,
+        'Aplikaci napojíme na reálný backend',
+        `Nasazení aplikace na internet`
+      ]}
+    />
+
+
+    <Typography  variant='h5'>CSS stylování a design</Typography>
+    <PointList
+      dataList={[
+        'Představíme si nejmoderněší přístup ke stylování: CSS in JS',
+        'Pro zvýšení efektivity budeme pro design design naší aplikace používat Material.ui',
+        `Aby jsme neztráceli čas designováním webu od nuly,
+        budeme používat nejmodernější UI (uživatelské rozhraní) knihovnu material.UI`
+      ]}
+    />
+
+
+    <Typography variant='h5'>Co budete potřebovat?</Typography>
+    <PointList
+      dataList={[
+        'Základní znalost programování',
+        'Znát základy HTML/CSS',
+        `Vlastní notebook`
+      ]}
+    />
+    <Button variant='contained' color='primary'>
+      Objednat
+    </Button>
+    <Button variant='contained' color='action' >
+      Zavřít
+    </Button>
   </div>
 )

@@ -1,18 +1,5 @@
-import { WithStyles } from '@material-ui/core'
-import withStyles from '@material-ui/core/styles/withStyles'
-import classNames from 'classnames'
 import React from 'react'
-import componentsStyles from '../Components/assets/jss/globalComponents/componentsStyles'
-import Footer from '../Components/core/Footer/Footer'
-import GridContainer from '../Components/core/Grid/GridContainer'
-import GridItem from '../Components/core/Grid/GridItem'
-import Header from '../Components/core/Header/Header'
-import HeaderLinks from '../Components/core/Header/HeaderLinks'
-import Parallax from '../Components/core/Parallax/Parallax'
 // sections
-import CoursesSection from '../Components/Courses/CoursesSection'
-import SectionLogin from '../Components/Login/SectionLogin'
-import TeamSection from '../Components/Team/TeamSection'
 /*
 import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/light"
 // import SyntaxHighlighter from 'react-syntax-highlighter'
@@ -48,7 +35,7 @@ export default thunk;
 `
 interface IState {
   currentCount: number
-  intervalId: NodeJS.Timeout
+  intervalId: NodeJS.Timeout | null
 }
 
 

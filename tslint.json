@@ -1,7 +1,7 @@
 {
   "extends": ["tslint:latest", "tslint:recommended", "tslint-react"],
   "rules": {
-    "ordered-imports": false,
+    "ordered-imports": true,
     "jsx-wrap-multiline": true,
     "import/no-unresolved": [2, { "caseSensitive": true }],
     "max-line-length": [true, {"limit": 100, "ignore-pattern": "//"}],
@@ -11,7 +11,7 @@
     "new-parens": true,
     "no-arg": true,
     "arrow-parens": false,
-    "no-unused-variable": false,
+    "no-unused-variable": true,
     "object-literal-sort-keys": false,
     "no-bitwise": true,
     "no-conditional-assignment": true,

@@ -86,9 +86,9 @@ const TeamSection = (props: IProps) => {
                 <p className={classes.description}>
                   Od svých 15let jsem se začal zajímat o svět programování.
                   Jako každý správný Frontendista jsem začal s 350 stránkovou
-                  knížkou jQuery a async echování HTML v PHP šablonách.<br />
+                  knížkou jQuery.
                   Postupem času jsem přešel na nodejs u které jsem zůstal už více
-                  jak 5 let a tím začala dlouhá láska mezi mnou a Javascriptem.
+                  než 5 let a tím začala dlouhá láska mezi mnou a javascriptem.
                 </p>
               </CardBody>
               <CardFooter className={classes.justifyCenter}>
@@ -128,11 +128,9 @@ const TeamSection = (props: IProps) => {
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                  Od svých 15let jsem se začal zajímat o svět programování.
-                  Jako každý správný Frontendista jsem začal s 350 stránkovou
-                  knížkou jQuery a async echování HTML v PHP šablonách.<br />
-                  Postupem času jsem přešel na nodejs u které jsem zůstal už více
-                  jak 5 let a tím začala dlouhá láska mezi mnou a Javascriptem.
+                Za poslední roky jsem prošel mnoho projektů od server render jade šablon
+                v nodejs, až k relay graphql stacku podobnému tomu,
+                který používá a vývíjí například facebook.com
                 </p>
               </CardBody>
               <CardFooter className={classes.justifyCenter}>
@@ -165,11 +163,11 @@ const TeamSection = (props: IProps) => {
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                  Od svých 15let jsem se začal zajímat o svět programování.
-                  Jako každý správný Frontendista jsem začal s 350 stránkovou
-                  knížkou jQuery a async echování HTML v PHP šablonách.<br />
-                  Postupem času jsem přešel na nodejs u které jsem zůstal už více
-                  jak 5 let a tím začala dlouhá láska mezi mnou a Javascriptem.
+                Postupně jsem testoval frontend frameworky,
+                až jsem našel nejlepší řešení pro věčné problémy
+                ve vue.js a reactu, který na většině projektů používáme dodnes.
+                Mezi moji posedlost patří 100% otypovaný
+                kód a proto nedám dopustit na typovou analýzu pomcí typescriptu, nebo flow.
                 </p>
               </CardBody>
               <CardFooter className={classes.justifyCenter}>

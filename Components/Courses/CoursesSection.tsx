@@ -7,17 +7,17 @@ import CardMedia from '@material-ui/core/CardMedia'
 import withStyles from '@material-ui/core/styles/withStyles'
 import Typography from '@material-ui/core/Typography'
 import React from 'react'
+import Modal from 'react-responsive-modal'
 import { cardTitle, title } from '../assets/jss/material-kit-react'
 import Card from '../core/Card/Card'
 import Button from '../core/CustomButtons/Button'
 import GridContainer from '../core/Grid/GridContainer'
 import GridItem from '../core/Grid/GridItem'
 import imagesStyle from '../core/Image/imagesStyles'
-import Modal from 'react-responsive-modal'
-import FrontendBasic from './FrontendBasic'
-import FrontendAdvanced from './FrontendAdvanced'
-import BackendBasic from './BackendBasic'
 import BackendAdvanced from './BackendAdvanced'
+import BackendBasic from './BackendBasic'
+import FrontendAdvanced from './FrontendAdvanced'
+import FrontendBasic from './FrontendBasic'
 
 const imageFrontendBasic = 'static/img/courses/imageFrontendBasic.png'
 const imageFrontendAdvanced = 'static/img/courses/imageFrontendAdvanced.png'
@@ -128,7 +128,7 @@ class CoursesSection extends React.Component<IProps, IState> {
                   return <BackendBasic />
                 case 'BackendAdvanced':
                   return <BackendAdvanced />
-                default: 
+                default:
                   return null
               }
             })()
@@ -167,14 +167,12 @@ class CoursesSection extends React.Component<IProps, IState> {
                 />
                 <CardContent>
                   <Typography gutterBottom variant='h5' component='h2'>
-                    React frontend Basic
+                    Základy moderních webových aplikací
                   </Typography>
                   <Typography component='p'>
-                    Kurz je určen pro všechny, které už nebaví programovat v
-                    technologíích, které byly vymyšleny za dob východního bloku.
-                    Ukážeme si nejmodernější bleeding edge stack,
-                    který vám ulehčí každodenní práci a udělá vás zase šťastným.
-                    Během školení projdeme
+                    Kurz je určen pro všechny co chtějí začít s programováním webových aplikací.
+                    Zaměříme se na frontend single page aplikace, které dnes použíají firmy,
+                    jako Facebook, AirBnb, Spotify nebo Kiwi...
                   </Typography>
                 </CardContent>
               </CardActionArea>

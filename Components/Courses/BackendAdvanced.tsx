@@ -1,6 +1,6 @@
-import * as React from 'react'
-import Typography from '@material-ui/core/Typography'
 import CardMedia from '@material-ui/core/CardMedia'
+import Typography from '@material-ui/core/Typography'
+import * as React from 'react'
 
 const cardMediaStyle = {
   padding: '70px 0',

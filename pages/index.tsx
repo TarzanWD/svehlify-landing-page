@@ -22,8 +22,6 @@ import { dark } from 'react-syntax-highlighter/styles/prism';
 
 registerLanguage('javascript', js)
 */
-import SyntaxHighlighter from 'react-syntax-highlighter/prism'
-import { dark } from 'react-syntax-highlighter/styles/prism'
 import HeaderCode from '../Components/HeaderCode'
 
 const mainPhotoSrc = 'https://s.cafebazaar.ir/1/upload/screenshot/com.sadrooid15.Materialwallpapers5.jpg'
