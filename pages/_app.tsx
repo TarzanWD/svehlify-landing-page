@@ -30,7 +30,7 @@ class MyApp extends App<IProps> {
     const { Component, pageProps } = this.props
     return (
       <>
-        <title>Svehlify</title>
+        <title>Svehlify - školení & firemní konzultace</title>
         <Container>
           {/* Wrap every page in Jss and Theme providers */}
           <JssProvider

@@ -13,6 +13,7 @@ import Parallax from '../Components/core/Parallax/Parallax'
 import CoursesSection from '../Components/Courses/CoursesSection'
 import SectionLogin from '../Components/Login/SectionLogin'
 import TeamSection from '../Components/Team/TeamSection'
+import AboutSection from '../Components/About/AboutSection'
 /*
 import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/light"
 // import SyntaxHighlighter from 'react-syntax-highlighter'
@@ -27,7 +28,7 @@ import HeaderCode from '../Components/HeaderCode'
 const mainPhotoSrc = 'https://s.cafebazaar.ir/1/upload/screenshot/com.sadrooid15.Materialwallpapers5.jpg'
 
 // '/static/img/bg2.jpg'
-interface IProps extends WithStyles<typeof componentsStyles> {}
+interface IProps extends WithStyles<typeof componentsStyles> { }
 
 
 class Index extends React.Component<IProps, void> {
@@ -36,7 +37,7 @@ class Index extends React.Component<IProps, void> {
     return (
       <div>
         <Header
-          brand='Javascript školení na míru'
+          brand='Školení & Firemní konzulace'
           rightLinks={<HeaderLinks />}
           fixed
           color='transparent'
@@ -52,11 +53,8 @@ class Index extends React.Component<IProps, void> {
                 <div className={classes.brand}>
                   <h1 className={classes.title}>Svehlify</h1>
                   <h3 className={classes.subtitle}>
-                    Školení moderních webových technologií
+                    Nejmodernější Webové technologie
                   </h3>
-                  <h4 className={classes.subtitle}>
-                    Firemní konzulace & pomoc s rozjetím nového projektu
-                  </h4>
                 </div>
 
               </GridItem>
@@ -67,8 +65,9 @@ class Index extends React.Component<IProps, void> {
           </div>
         </Parallax>
         <div className={classNames(classes.main, classes.mainRaised)}>
-          <CoursesSection />
+          <AboutSection />
           <TeamSection />
+          <CoursesSection />
           <SectionLogin />
         </div>
         <Footer />
@@ -76,5 +75,4 @@ class Index extends React.Component<IProps, void> {
     )
   }
 }
-
 export default withStyles(componentsStyles)(Index)
