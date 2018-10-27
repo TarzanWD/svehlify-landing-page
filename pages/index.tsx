@@ -55,7 +55,7 @@ class Index extends React.Component<IProps, void> {
                     Školení moderních webových technologií
                   </h3>
                   <h4 className={classes.subtitle}>
-                    Našim cílem je omladit internet
+                    Firemní konzulace & pomoc s rozjetím nového projektu
                   </h4>
                 </div>
 

@@ -19,18 +19,26 @@ export default ({ classes }: IProps) => (
       title='Contemplative Reptile'
     />
     <br />
-    <Typography variant='h4' id='modal-title'>
-      Nodejs REST-API/GraphQL backend
-    </Typography>
-    <br />
-    <Typography variant='h4' id='modal-title'>
-      Základy moderních webových aplikací
+    <Typography variant='h4' id='modal-title'> style={{ marginBottom: '20px' }}
+      Kdo jsme?
     </Typography>
     <Typography style={{ marginBottom: '20px' }}>
-      Kurz je určen pro všechny, které už nebaví programovat v technologíích,
-      které byly vymyšleny za dob východního bloku.
-      Ukážeme si nejmodernější stable & bleeding edge technologie,
-      které vám ulehčí každodenní práci a udělá vás zase šťastnými.
+      Jsme skupina lidí, kteri si v životě prošli práci na enterprise projektech a chtějí
+      zachránit lidstvo a vzbouřit programový k tomu, ať se do starého enterprise
+      kodu už nový nepřidává a věci se upravují a budují znova a čištěji
+    </Typography>
+
+
+    <Typography style={{ marginBottom: '20px' }}>
+      Technologie které skolime využívají statisíce firem...
+      Například Facebook airbnb github apple a milion dalších firema
+      pomáhají jim k ladnemu chodu.
+    </Typography>
+
+    <Typography style={{ marginBottom: '20px' }}>
+      Všechny technologie které učíme lze integrovat
+      do vašeho již rozděleného systému a nemusíte se
+      bát zpětné nekompatibily
     </Typography>
 
     <Typography variant='h5'>Kurz obnáší</Typography>

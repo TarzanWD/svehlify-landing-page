@@ -283,13 +283,14 @@ class CoursesSection extends React.Component<IProps, IState> {
                 />
                 <CardContent>
                   <Typography gutterBottom variant='h5' component='h2'>
-                    Custom školení pro firmy
+                    Školení na míru
                   </Typography>
                   <Typography component='p'>
-                    Nabízíme custom školení naškálované přímo pro firmy
-                    Nabízíme custom školení naškálované přímo pro firmy
-                    Nabízíme custom školení naškálované přímo pro firmy
-                    Nabízíme custom školení naškálované přímo pro firmy
+                    Školení na míru
+                    Nabízíme školení upravené přesně podle
+                    firemních business požadavků. Na téma konzultacím a
+                    školení se lze blíže domluvit a uzpůsobit.
+                    Délka a cena školení se odvíjí podle domluvy.
                   </Typography>
                 </CardContent>
               </CardActionArea>
