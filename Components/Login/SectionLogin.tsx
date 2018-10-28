@@ -14,7 +14,7 @@ import GridContainer from '../core/Grid/GridContainer'
 import GridItem from '../core/Grid/GridItem'
 import loginStyle from './loginStyle'
 
-interface IProps extends WithStyles<typeof loginStyle> {}
+interface IProps extends WithStyles<typeof loginStyle> { }
 
 class SectionLogin extends React.Component<IProps> {
 
@@ -33,48 +33,10 @@ class SectionLogin extends React.Component<IProps> {
                 <form className={classes.form}>
                   <CardHeader color='primary' className={classes.cardHeader}>
                     <h4>Zaregisrujte se</h4>
-                    <div className={classes.socialLine}>
-                      <Button
-                        justIcon
-                        href='#pablo'
-                        target='_blank'
-                        color='transparent'
-                        onClick={this.preventDefaultClick}
-                      >
-                        <i
-                          className={classes.socialIcons + ' fab fa-twitter'}
-                        />
-                      </Button>
-                      <Button
-                        justIcon
-                        href='#pablo'
-                        target='_blank'
-                        color='transparent'
-                        onClick={this.preventDefaultClick}
-                      >
-                        <i
-                          className={classes.socialIcons + ' fab fa-facebook'}
-                        />
-                      </Button>
-                      <Button
-                        justIcon
-                        href='#pablo'
-                        target='_blank'
-                        color='transparent'
-                        onClick={this.preventDefaultClick}
-                      >
-                        <i
-                          className={
-                            classes.socialIcons + ' fab fa-google-plus-g'
-                          }
-                        />
-                      </Button>
-                    </div>
                   </CardHeader>
-                  <p className={classes.divider}>Or Be Classical</p>
                   <CardBody>
                     <CustomInput
-                      labelText='First Name...'
+                      labelText='Jméno...'
                       id='first'
                       formControlProps={{
                         fullWidth: true,
@@ -106,7 +68,7 @@ class SectionLogin extends React.Component<IProps> {
                   </CardBody>
                   <CardFooter className={classes.cardFooter}>
                     <Button simple color='primary' size='large'>
-                      Get started
+                      Registrovat
                     </Button>
                   </CardFooter>
                 </form>

@@ -41,6 +41,7 @@ const loginStyle = (theme: Theme) => createStyles({
     height: '100%',
     lineHeight: '41px',
     fontSize: '20px',
+    color: '#fff'
   },
   divider: {
     marginTop: '30px',
