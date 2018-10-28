@@ -29,7 +29,7 @@ const awsImgSrc = 'static/img/courses/aws.png'
 
 const coursesStyle = (theme) => createStyles({
   section: {
-    padding: '70px 0',
+    padding: '2rem 0',
     textAlign: 'center',
   },
   title: {
@@ -78,17 +78,13 @@ const coursesStyle = (theme) => createStyles({
     height: 140,
     overflow: 'hidden'
   },
-  aboutUs: {
-    textAlign: 'left',
-    margin: '20px 40px 20px'
-  },
   topOfThePage: {
     zIndex: 10000
   }
 })
 
 
-interface IProps extends WithStyles<typeof coursesStyle> {}
+interface IProps extends WithStyles<typeof coursesStyle> { }
 type ModalNames = 'FrontendBasic' | 'FrontendAdvanced' | 'BackendBasic' | 'CICDCourse'
 interface IState {
   openModal: null | ModalNames
@@ -109,7 +105,7 @@ class CoursesSection extends React.Component<IProps, IState> {
     this.setState({ openModal: null })
   }
 
-  public render() {
+  public render() {
     const { classes } = this.props
 
     return (
@@ -122,7 +118,7 @@ class CoursesSection extends React.Component<IProps, IState> {
         >
           {
             (() => {
-              switch(this.state.openModal) {
+              switch (this.state.openModal) {
                 case 'FrontendBasic':
                   return <FrontendBasic />
                 case 'FrontendAdvanced':
@@ -137,6 +133,7 @@ class CoursesSection extends React.Component<IProps, IState> {
             })()
           }
         </Modal>
+
 
         <div className={classes.aboutUs}>
           <Typography variant='h5'>
@@ -193,7 +190,7 @@ class CoursesSection extends React.Component<IProps, IState> {
                   </Typography>
                 </CardContent>
               </CardActionArea>
-              <CardActions style={{ bottom: 0, position: 'absolute '}}>
+              <CardActions style={{ bottom: 0, position: 'absolute' }}>
                 <Button color='primary' onClick={this.openModel('FrontendBasic')}>
                   Více informací
                 </Button>
@@ -211,7 +208,7 @@ class CoursesSection extends React.Component<IProps, IState> {
                 />
                 <CardContent>
                   <Typography gutterBottom variant='h5' component='h2'>
-                    React GraphQL Senpai
+                    React GraphQL ninja
                   </Typography>
                   <Typography component='p'>
                     Máte už zkušenosti s REST-API i reactem a přestává vás bavit
@@ -220,7 +217,7 @@ class CoursesSection extends React.Component<IProps, IState> {
                   </Typography>
                 </CardContent>
               </CardActionArea>
-              <CardActions style={{ bottom: 0, position: 'absolute '}}>
+              <CardActions style={{ bottom: 0, position: 'absolute' }}>
                 <Button color='primary' onClick={this.openModel('FrontendAdvanced')}>
                   Více informací
                 </Button>
@@ -238,18 +235,17 @@ class CoursesSection extends React.Component<IProps, IState> {
                 />
                 <CardContent>
                   <Typography gutterBottom variant='h5' component='h2'>
-                    Nodejs REST-API/GraphQL backend
+                    Nodejs REST-API/GraphQL
                   </Typography>
                   <Typography component='p'>
                     Kurz je určen pro všechny, které už nebaví programovat v
                     technologiích, které byly vymyšleny za dob východního bloku.
-                    Ukážeme si nejmodernější bleeding edge stack,
-                    který vám ulehčí každodenní práci a udělá vás zase šťastným.
-                    Během školení projdeme...
+                    Ukážeme si nejmodernější stack,
+                    který vám ulehčí práci a udělá vás zase šťastným...
                   </Typography>
                 </CardContent>
               </CardActionArea>
-              <CardActions style={{ bottom: 0, position: 'absolute '}}>
+              <CardActions style={{ bottom: 0, position: 'absolute' }}>
                 <Button color='primary' onClick={this.openModel('BackendBasic')}>
                   Více informací
                 </Button>
@@ -279,7 +275,7 @@ class CoursesSection extends React.Component<IProps, IState> {
 
                 </CardContent>
               </CardActionArea>
-              <CardActions style={{ bottom: 0, position: 'absolute '}}>
+              <CardActions style={{ bottom: 0, position: 'absolute' }}>
                 <Button color='primary' onClick={this.openModel('CICDCourse')}>
                   Více informací
                 </Button>
@@ -308,7 +304,7 @@ class CoursesSection extends React.Component<IProps, IState> {
                   </Typography>
                 </CardContent>
               </CardActionArea>
-              <CardActions style={{ bottom: 0, position: 'absolute '}}>
+              <CardActions style={{ bottom: 0, position: 'absolute' }}>
                 <Button color='primary' onClick={this.openModel('BackendBasic')}>
                   Více informací
                 </Button>
@@ -336,7 +332,7 @@ class CoursesSection extends React.Component<IProps, IState> {
                   </Typography>
                 </CardContent>
               </CardActionArea>
-              <CardActions style={{ bottom: 0, position: 'absolute '}}>
+              <CardActions style={{ bottom: 0, position: 'absolute' }}>
                 <Button color='primary' onClick={this.openModel('CICDCourse')}>
                   Více informací
                 </Button>

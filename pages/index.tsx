@@ -12,7 +12,7 @@ import Parallax from '../Components/core/Parallax/Parallax'
 import CoursesSection from '../Components/Courses/CoursesSection'
 import SectionLogin from '../Components/Login/SectionLogin'
 import TeamSection from '../Components/Team/TeamSection'
-import Hidden from '@material-ui/core/Hidden'
+import AboutSection from '../Components/About/AboutSection'
 import HeaderCode from '../Components/HeaderCode'
 import ContainerDimensions from 'react-container-dimensions'
 
@@ -20,11 +20,6 @@ const mainPhotoSrc = 'https://s.cafebazaar.ir/1/upload/screenshot/'+
   'com.sadrooid15.Materialwallpapers5.jpg'
 
 interface IProps extends WithStyles<typeof componentsStyles> {}
-/*
-
-</Hidden>
-<Hidden smDown>
-*/
 
 class Index extends React.Component<IProps, void> {
   public render() {
@@ -64,8 +59,9 @@ class Index extends React.Component<IProps, void> {
           </div>
         </Parallax>
         <div className={classNames(classes.main, classes.mainRaised)}>
-          <CoursesSection />
+          <AboutSection />
           <TeamSection />
+          <CoursesSection />
           <SectionLogin />
         </div>
         <Footer />
@@ -73,5 +69,4 @@ class Index extends React.Component<IProps, void> {
     )
   }
 }
-
 export default withStyles(componentsStyles)(Index)
