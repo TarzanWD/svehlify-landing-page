@@ -25,8 +25,10 @@ interface IProps extends WithStyles<typeof buttonStyle> {
   disabled?: boolean
   block?: boolean
   link?: boolean
+  target?: string
   justIcon?: boolean
   className?: string
+  href?: string
   onClick?: (e: Event) => void
 }
 

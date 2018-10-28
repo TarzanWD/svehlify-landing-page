@@ -182,7 +182,7 @@ class CoursesSection extends React.Component<IProps, IState> {
                 />
                 <CardContent>
                   <Typography gutterBottom variant='h5' component='h2'>
-                    Frontend react Genin
+                    React Frontend Ninja
                   </Typography>
                   <Typography component='p'>
                     Kurz je určen pro všechny co chtějí začít s programováním webových aplikací.
@@ -209,7 +209,7 @@ class CoursesSection extends React.Component<IProps, IState> {
                 />
                 <CardContent>
                   <Typography gutterBottom variant='h5' component='h2'>
-                  React GraphQL ninja
+                    React GraphQL Senpai
                   </Typography>
                   <Typography component='p'>
                     Máte už zkušenosti s REST-API i reactem a přestává vás bavit
@@ -295,7 +295,7 @@ class CoursesSection extends React.Component<IProps, IState> {
                 />
                 <CardContent>
                   <Typography gutterBottom variant='h5' component='h2'>
-                    školení & Firemní konzulace
+                    Webapps školení
                   </Typography>
                   <Typography component='p'>
                     Školení na míru
@@ -330,7 +330,7 @@ class CoursesSection extends React.Component<IProps, IState> {
                     Kurz je určen pro ty z vás kdo chtějí nahlednout za oponu
                     těchto dvou v dnešní době buzzwordu. A chtěji testovat a nasazovat
                     aplikace pouhým kliknutím. Dozvíte se zde něco málo o
-                    různých způsobech testování. 
+                    různých způsobech testování.
                   </Typography>
                 </CardContent>
               </CardActionArea>

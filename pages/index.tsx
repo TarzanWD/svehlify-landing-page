@@ -9,26 +9,22 @@ import GridItem from '../Components/core/Grid/GridItem'
 import Header from '../Components/core/Header/Header'
 import HeaderLinks from '../Components/core/Header/HeaderLinks'
 import Parallax from '../Components/core/Parallax/Parallax'
-// sections
 import CoursesSection from '../Components/Courses/CoursesSection'
 import SectionLogin from '../Components/Login/SectionLogin'
 import TeamSection from '../Components/Team/TeamSection'
-/*
-import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/light"
-// import SyntaxHighlighter from 'react-syntax-highlighter'
-import { docco } from 'react-syntax-highlighter/styles/hljs'
-import js from 'react-syntax-highlighter/languages/hljs/javascript';
-import { dark } from 'react-syntax-highlighter/styles/prism';
-
-registerLanguage('javascript', js)
-*/
+import Hidden from '@material-ui/core/Hidden'
 import HeaderCode from '../Components/HeaderCode'
+import ContainerDimensions from 'react-container-dimensions'
 
-const mainPhotoSrc = 'https://s.cafebazaar.ir/1/upload/screenshot/com.sadrooid15.Materialwallpapers5.jpg'
+const mainPhotoSrc = 'https://s.cafebazaar.ir/1/upload/screenshot/'+
+  'com.sadrooid15.Materialwallpapers5.jpg'
 
-// '/static/img/bg2.jpg'
 interface IProps extends WithStyles<typeof componentsStyles> {}
+/*
 
+</Hidden>
+<Hidden smDown>
+*/
 
 class Index extends React.Component<IProps, void> {
   public render() {
@@ -51,12 +47,16 @@ class Index extends React.Component<IProps, void> {
               <GridItem xs={12} sm={12} md={4}>
                 <div className={classes.brand}>
                   <h1 className={classes.title}>Svehlify</h1>
-                  <h3 className={classes.subtitle}>
+                  <h3
+                    className={`${classes.subtitle} ${classes.container}`}
+                    style={{ padding: '20px', background: 'rgba(0, 0, 0, 0.4)' }}
+                  >
                     Nejmodernější Webové technologie
                   </h3>
                 </div>
 
               </GridItem>
+
               <GridItem xs={12} sm={12} md={8}>
                 <HeaderCode />
               </GridItem>

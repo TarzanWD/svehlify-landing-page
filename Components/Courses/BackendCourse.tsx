@@ -23,9 +23,6 @@ export default ({ classes }: IProps) => (
       Nodejs REST-API/GraphQL backend
     </Typography>
     <br />
-    <Typography variant='h4' id='modal-title'>
-      Základy moderních webových aplikací
-    </Typography>
     <Typography style={{ marginBottom: '20px' }}>
       Kurz je určen pro všechny, které už nebaví programovat v technologíích,
       které byly vymyšleny za dob východního bloku.

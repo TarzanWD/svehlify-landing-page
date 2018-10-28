@@ -20,7 +20,7 @@ export default ({ classes }: IProps) => (
     />
     <br />
     <Typography variant='h4' id='modal-title'>
-      React GraphQL ninja
+      React GraphQL Senpai
     </Typography>
     <Typography style={{ marginBottom: '20px' }}>
       Máte už zkušenosti s REST-API i reactem a přestává vás bavit

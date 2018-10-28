@@ -21,7 +21,7 @@ export default ({ classes }: IProps) => (
     />
     <br />
     <Typography variant='h4' id='modal-title'>
-      Základy moderních webových aplikací
+      React Frontend Ninja
     </Typography>
     <Typography style={{ marginBottom: '20px' }}>
       Kurz je určen pro všechny co chtějí začít s programováním webových aplikací.
