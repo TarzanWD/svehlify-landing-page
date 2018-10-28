@@ -32,6 +32,9 @@ export default ({ classes }: IProps) => (
       style={cardMediaStyle}
     />
     <br />
+    <Typography variant='h4' id='modal-title'>
+      React Frontend Ninja
+    </Typography>
     <Typography style={{ fontSize: '1rem', padding: '1rem 5vw' }}>
       Kurz je určen pro všechny co chtějí začít s programováním webových aplikací.
       Zaměříme se na vývoj frontend single page aplikací,

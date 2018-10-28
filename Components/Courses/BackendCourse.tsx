@@ -31,11 +31,16 @@ export default ({ classes }: IProps) => (
       style={cardMediaStyle}
     />
     <br />
-    <Typography style={{ fontSize: '1rem', padding: '1rem 5vw' }}>
-      Jsme skupina lidí, kteri si v životě prošli práci na enterprise projektech a chtějí
-      zachránit lidstvo a vzbouřit programový k tomu, ať se do starého enterprise
-      kodu už nový nepřidává a věci se upravují a budují znova a čištěji
+  
+    <Typography variant='h4' id='modal-title'>
+      Nodejs REST-API/GraphQL backend
     </Typography>
+    <Typography style={{ fontSize: '1rem', padding: '1rem 5vw' }}>
+      Kurz je určen pro všechny, které už nebaví programovat v technologíích,
+      které byly vymyšleny za dob východního bloku.
+      Ukážeme si nejmodernější stable & bleeding edge technologie,
+      které vám ulehčí každodenní práci a udělá vás zase šťastnými.
+    <br />
 
     <Grid container spacing={24}>
       <Hidden xsDown>

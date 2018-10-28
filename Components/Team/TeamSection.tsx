@@ -126,9 +126,9 @@ const TeamSection = (props: IProps) => {
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
                 </p>
               </CardBody>
               <CardFooter className={classes.justifyCenter}>

@@ -134,6 +134,41 @@ class CoursesSection extends React.Component<IProps, IState> {
           }
         </Modal>
 
+
+        <div className={classes.aboutUs}>
+          <Typography variant='h5'>
+            Proč Svehlify?
+          </Typography>
+          <Typography variant='paragraph' style={{ marginBottom: '20px' }}>
+            Jsme skupina lidí, kteri si v životě prošli práci na enterprise projektech a chtějí
+            zachránit lidstvo a vzbouřit programový k tomu, ať se do starého enterprise
+            kodu už nový nepřidává a věci se upravují a budují znova a čištěji
+          </Typography>
+
+
+          <Typography variant='h5'>
+            Připraveni na produkci
+          </Typography>
+          <Typography variant='paragraph'>
+            Existuje mnoho technologií, kterým je dobré se vyhnout, nebo jsou 
+            úžasné, ale nejsou ještě připravené na produkci.
+            Technologie které školime využívají statisíce firem po celém světě.
+          </Typography>
+          <Typography variant='paragraph' style={{ marginBottom: '20px' }}>
+            Jako jedno z hlavních bych vybral firmy jako:
+            Facebook, airbnb, github, apple a další...
+          </Typography>
+
+          <Typography variant='h5'>
+            Budou kurzy prospěšné i ve vaší firmě?
+          </Typography>
+          <Typography variant='paragraph' style={{ marginBottom: '20px' }}>
+            Všechny technologie které učíme lze integrovat
+            do již rozpracovaných systému. Nemusíte se tedy bát
+            zpětné nekompatibily a nutného přepsání celého projektu.
+          </Typography>
+        </div>
+
         <h2 className={classes.title}>Kurzy</h2>
         <GridContainer>
           <GridItem xs={12} sm={12} md={6} lg={4}>
@@ -146,7 +181,7 @@ class CoursesSection extends React.Component<IProps, IState> {
                 />
                 <CardContent>
                   <Typography gutterBottom variant='h5' component='h2'>
-                    Frontend react Genin
+                    React Frontend Ninja
                   </Typography>
                   <Typography component='p'>
                     Kurz je určen pro všechny co chtějí začít s programováním webových aplikací.
@@ -258,7 +293,7 @@ class CoursesSection extends React.Component<IProps, IState> {
                 />
                 <CardContent>
                   <Typography gutterBottom variant='h5' component='h2'>
-                    školení & Firemní konzulace
+                    Webapps školení
                   </Typography>
                   <Typography component='p'>
                     Školení na míru

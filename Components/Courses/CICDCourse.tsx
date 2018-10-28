@@ -24,9 +24,6 @@ export default ({ classes }: IProps) => (
       CI & CD Senpai
     </Typography>
     <br />
-    <Typography variant='h4' id='modal-title'>
-      Základy moderních webových aplikací
-    </Typography>
     <Typography style={{ marginBottom: '20px' }}>
       Kurz je určen pro ty z vás kdo chtějí nahlednout za oponu těchto dvou v dnešní
       době buzzwordu. A chtěji testovat a nasazovat aplikace pouhým kliknutím. Dozvíte
@@ -57,7 +54,7 @@ export default ({ classes }: IProps) => (
     <Typography variant='h5'>Co budete potřebovat?</Typography>
     <PointList
       dataList={[
-        `Základní znalosti práce s Linuxovým prostředí 
+        `Základní znalosti práce s Linuxovým prostředí
           Popřípadě se jde domluvit individuálně)`,
         `Vlastní notebook`
       ]}

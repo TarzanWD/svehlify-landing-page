@@ -31,6 +31,10 @@ export default ({ classes }: IProps) => (
       style={cardMediaStyle}
     />
     <br />
+    <Typography variant='h4' id='modal-title'>
+      React GraphQL Senpai
+    </Typography>
+  
     <Typography style={{ fontSize: '1rem', padding: '1rem 5vw' }}>
       Máte už zkušenosti s REST-API i reactem a přestává vás bavit
       monotonní práce psaní nudných redux storů a chcete se zase cítit jako v době,
