@@ -13,6 +13,7 @@ import CustomInput from '../core/CustomInput/CustomInput'
 import GridContainer from '../core/Grid/GridContainer'
 import GridItem from '../core/Grid/GridItem'
 import loginStyle from './loginStyle'
+import Typography from '@material-ui/core/Typography'
 
 interface IProps extends WithStyles<typeof loginStyle> {}
 
@@ -32,7 +33,7 @@ class SectionLogin extends React.Component<IProps> {
               <Card>
                 <form className={classes.form}>
                   <CardHeader color='primary' className={classes.cardHeader}>
-                    <h4>Zaregisrujte se</h4>
+                    <h4>Máte zájem o kurz?</h4>
                     <div className={classes.socialLine}>
                       <Button
                         justIcon
@@ -41,9 +42,7 @@ class SectionLogin extends React.Component<IProps> {
                         color='transparent'
                         onClick={this.preventDefaultClick}
                       >
-                        <i
-                          className={classes.socialIcons + ' fab fa-twitter'}
-                        />
+                        <img style={{ height: '20px' }} src='/static/icons/twitter.svg' />
                       </Button>
                       <Button
                         justIcon
@@ -52,26 +51,18 @@ class SectionLogin extends React.Component<IProps> {
                         color='transparent'
                         onClick={this.preventDefaultClick}
                       >
-                        <i
-                          className={classes.socialIcons + ' fab fa-facebook'}
-                        />
-                      </Button>
-                      <Button
-                        justIcon
-                        href='#pablo'
-                        target='_blank'
-                        color='transparent'
-                        onClick={this.preventDefaultClick}
-                      >
-                        <i
-                          className={
-                            classes.socialIcons + ' fab fa-google-plus-g'
-                          }
-                        />
+                        <img style={{  height: '18px' }} src='/static/icons/github.svg' />
                       </Button>
                     </div>
                   </CardHeader>
-                  <p className={classes.divider}>Or Be Classical</p>
+                  <p className={classes.divider}>Neváhejte se nám ozvat na email:</p>
+                  
+                  <a className={classes.divider} href='mailto:svehl.jakub@gmail.com' target='_top'>
+                    <Typography variant='h6' style={{ marginBottom: '20px' }}>
+                      svehl.jakub@gmail.com
+                    </Typography>
+                  </a>
+                  {/*
                   <CardBody>
                     <CustomInput
                       labelText='First Name...'
@@ -109,6 +100,7 @@ class SectionLogin extends React.Component<IProps> {
                       Get started
                     </Button>
                   </CardFooter>
+                  */}
                 </form>
               </Card>
             </GridItem>
