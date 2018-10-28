@@ -61,51 +61,33 @@ const HeaderLinks = ({ ...props }) => {
         >
           <Button
             link
-            href='https://twitter.com/CreativeTim'
+            href='https://twitter.com/KubaSvehla'
             target='_blank'
-            color='transparent'
             className={classes.navLink}
           >
-            <i className={classes.socialIcons + ' fab fa-twitter'} />
+            <img style={{ color: '#FFF', height: '26px' }} src='/static/icons/twitter.svg' />
           </Button>
         </Tooltip>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Tooltip
-          id='instagram-facebook'
-          title='Follow us on facebook'
+          id='instagram-github'
+          title='Follow us on github'
           placement={innerWidth > 959 ? 'top' : 'left'}
           classes={{ tooltip: classes.tooltip }}
         >
           <Button
             color='transparent'
             link
-            href='https://www.facebook.com/CreativeTim'
+            href='https://github.com/Svehla'
             target='_blank'
             className={classes.navLink}
           >
-            <i className={classes.socialIcons + ' fab fa-facebook'} />
+            <img style={{ fill: '#FFF', height: '24px' }} src='/static/icons/github.svg' />
           </Button>
         </Tooltip>
       </ListItem>
-      <ListItem className={classes.listItem}>
-        <Tooltip
-          id='instagram-tooltip'
-          title='Follow us on instagram'
-          placement={innerWidth > 959 ? 'top' : 'left'}
-          classes={{ tooltip: classes.tooltip }}
-        >
-          <Button
-            color='transparent'
-            link
-            href='https://www.instagram.com/CreativeTimOfficial'
-            target='_blank'
-            className={classes.navLink}
-          >
-            <i className={classes.socialIcons + ' fab fa-instagram'} />
-          </Button>
-        </Tooltip>
-      </ListItem>
+
     </List>
   )
 }

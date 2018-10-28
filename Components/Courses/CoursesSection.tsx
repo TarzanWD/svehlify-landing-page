@@ -27,7 +27,7 @@ const CICD = 'static/img/courses/CICD.png'
 const nodeBackend = 'static/img/courses/nodeBackend.png'
 const awsImgSrc = 'static/img/courses/aws.png'
 
-const coursesStyle = (theme) => createStyles({
+const coursesStyle = () => createStyles({
   section: {
     padding: '2rem 0',
     textAlign: 'center',
@@ -146,7 +146,7 @@ class CoursesSection extends React.Component<IProps, IState> {
                 />
                 <CardContent>
                   <Typography gutterBottom variant='h5' component='h2'>
-                    Frontend react Genin
+                    React Frontend Ninja
                   </Typography>
                   <Typography component='p'>
                     Kurz je určen pro všechny co chtějí začít s programováním webových aplikací.
@@ -257,7 +257,7 @@ class CoursesSection extends React.Component<IProps, IState> {
                 />
                 <CardContent>
                   <Typography gutterBottom variant='h5' component='h2'>
-                    školení & Firemní konzulace
+                    Webapps školení
                   </Typography>
                   <Typography component='p'>
                     Školení na míru
