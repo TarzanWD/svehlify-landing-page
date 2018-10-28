@@ -8,7 +8,7 @@ import withStyles from '@material-ui/core/styles/withStyles'
 import Tooltip from '@material-ui/core/Tooltip'
 
 // @material-ui/icons
-import { AccessibilityNew, CloudDownload } from '@material-ui/icons'
+import { AccessibilityNew, School, Fingerprint, MailOutline } from '@material-ui/icons'
 
 // core components
 import Button from '../CustomButtons/Button'
@@ -29,7 +29,7 @@ const HeaderLinks = ({ ...props }) => {
             color='transparent'
             className={classes.navLink}
           >
-            <CloudDownload className={classes.icons} /> Školení
+            <School className={classes.icons} /> Školení
           </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -39,7 +39,7 @@ const HeaderLinks = ({ ...props }) => {
           color='transparent'
           className={classes.navLink}
         >
-          <AccessibilityNew className={classes.icons} /> Lidé
+          <Fingerprint className={classes.icons} /> Kdo jsme
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -49,7 +49,7 @@ const HeaderLinks = ({ ...props }) => {
           color='transparent'
           className={classes.navLink}
         >
-          <AccessibilityNew className={classes.icons} /> Registrace
+          <MailOutline className={classes.icons} /> Přihlásit se
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
