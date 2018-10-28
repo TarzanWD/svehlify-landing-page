@@ -135,7 +135,7 @@ class CoursesSection extends React.Component<IProps, IState> {
         </Modal>
 
         <h2 className={classes.title}>Kurzy</h2>
-        <GridContainer>
+        <GridContainer style={{ marginBottom: '30px' }}>
           <GridItem xs={12} sm={12} md={6} lg={4}>
             <Card className={classes.card}>
               <CardActionArea onClick={this.openModel('FrontendBasic')}>
@@ -177,8 +177,10 @@ class CoursesSection extends React.Component<IProps, IState> {
                   </Typography>
                   <Typography component='p'>
                     Máte už zkušenosti s REST-API i reactem a přestává vás bavit
-                    monotonní práce psaní nudných redux storů a chcete se zase cítit jako v době,
-                    kdy jste spustili svůj první for cyklus...
+                    monotonní práce psaní redux storů?
+                    Chcete se zase cítit jako v době,
+                    kdy jste spustili svůj první
+                    for cyklus a zjistili, že svět je krásné místo pro žití?
                   </Typography>
                 </CardContent>
               </CardActionArea>

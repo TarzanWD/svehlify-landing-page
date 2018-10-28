@@ -8,7 +8,7 @@ import withStyles from '@material-ui/core/styles/withStyles'
 import Tooltip from '@material-ui/core/Tooltip'
 
 // @material-ui/icons
-import { AccessibilityNew, CloudDownload } from '@material-ui/icons'
+import { AccessibilityNew, School, Fingerprint, MailOutline } from '@material-ui/icons'
 
 // core components
 import Button from '../CustomButtons/Button'
@@ -29,7 +29,7 @@ const HeaderLinks = ({ ...props }) => {
             color='transparent'
             className={classes.navLink}
           >
-            <CloudDownload className={classes.icons} /> Školení
+            <School className={classes.icons} /> Školení
           </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -39,7 +39,7 @@ const HeaderLinks = ({ ...props }) => {
           color='transparent'
           className={classes.navLink}
         >
-          <AccessibilityNew className={classes.icons} /> Lidé
+          <Fingerprint className={classes.icons} /> Kdo jsme
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -49,13 +49,13 @@ const HeaderLinks = ({ ...props }) => {
           color='transparent'
           className={classes.navLink}
         >
-          <AccessibilityNew className={classes.icons} /> Registrace
+          <MailOutline className={classes.icons} /> Přihlásit se
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Tooltip
           id='instagram-twitter'
-          title='Follow us on twitter'
+          title='Sledujte svehlify twitteru'
           placement={innerWidth > 959 ? 'top' : 'left'}
           classes={{ tooltip: classes.tooltip }}
         >
@@ -72,7 +72,7 @@ const HeaderLinks = ({ ...props }) => {
       <ListItem className={classes.listItem}>
         <Tooltip
           id='instagram-github'
-          title='Follow us on github'
+          title='Sledujte nás na githubu'
           placement={innerWidth > 959 ? 'top' : 'left'}
           classes={{ tooltip: classes.tooltip }}
         >

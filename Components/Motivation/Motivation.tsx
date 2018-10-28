@@ -1,6 +1,8 @@
 
 import React from 'react'
 import Typography from '@material-ui/core/Typography'
+import GridContainer from '../core/Grid/GridContainer'
+import GridItem from '../core/Grid/GridItem'
 
 const textBlock = {
   maxWidth: '20rem',
