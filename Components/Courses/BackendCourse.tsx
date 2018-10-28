@@ -31,7 +31,7 @@ export default ({ classes }: IProps) => (
       style={cardMediaStyle}
     />
     <br />
-  
+
     <Typography variant='h4' id='modal-title'>
       Nodejs REST-API/GraphQL backend
     </Typography>
@@ -40,6 +40,7 @@ export default ({ classes }: IProps) => (
       které byly vymyšleny za dob východního bloku.
       Ukážeme si nejmodernější stable & bleeding edge technologie,
       které vám ulehčí každodenní práci a udělá vás zase šťastnými.
+    </Typography>
     <br />
 
     <Grid container spacing={24}>

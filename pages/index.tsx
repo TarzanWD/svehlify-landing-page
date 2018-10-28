@@ -14,7 +14,7 @@ import SectionLogin from '../Components/Login/SectionLogin'
 import TeamSection from '../Components/Team/TeamSection'
 import AboutSection from '../Components/About/AboutSection'
 import HeaderCode from '../Components/HeaderCode'
-import ContainerDimensions from 'react-container-dimensions'
+import Motivation from '../Components/Motivation/Motivation'
 
 const mainPhotoSrc = 'https://s.cafebazaar.ir/1/upload/screenshot/'+
   'com.sadrooid15.Materialwallpapers5.jpg'
@@ -60,8 +60,9 @@ class Index extends React.Component<IProps, void> {
         </Parallax>
         <div className={classNames(classes.main, classes.mainRaised)}>
           <AboutSection />
-          <TeamSection />
           <CoursesSection />
+          <Motivation />
+          <TeamSection />
           <SectionLogin />
         </div>
         <Footer />

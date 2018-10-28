@@ -27,7 +27,7 @@ const CICD = 'static/img/courses/CICD.png'
 const nodeBackend = 'static/img/courses/nodeBackend.png'
 const awsImgSrc = 'static/img/courses/aws.png'
 
-const coursesStyle = (theme) => createStyles({
+const coursesStyle = () => createStyles({
   section: {
     padding: '2rem 0',
     textAlign: 'center',
@@ -133,41 +133,6 @@ class CoursesSection extends React.Component<IProps, IState> {
             })()
           }
         </Modal>
-
-
-        <div className={classes.aboutUs}>
-          <Typography variant='h5'>
-            Proč Svehlify?
-          </Typography>
-          <Typography variant='paragraph' style={{ marginBottom: '20px' }}>
-            Jsme skupina lidí, kteri si v životě prošli práci na enterprise projektech a chtějí
-            zachránit lidstvo a vzbouřit programový k tomu, ať se do starého enterprise
-            kodu už nový nepřidává a věci se upravují a budují znova a čištěji
-          </Typography>
-
-
-          <Typography variant='h5'>
-            Připraveni na produkci
-          </Typography>
-          <Typography variant='paragraph'>
-            Existuje mnoho technologií, kterým je dobré se vyhnout, nebo jsou 
-            úžasné, ale nejsou ještě připravené na produkci.
-            Technologie které školime využívají statisíce firem po celém světě.
-          </Typography>
-          <Typography variant='paragraph' style={{ marginBottom: '20px' }}>
-            Jako jedno z hlavních bych vybral firmy jako:
-            Facebook, airbnb, github, apple a další...
-          </Typography>
-
-          <Typography variant='h5'>
-            Budou kurzy prospěšné i ve vaší firmě?
-          </Typography>
-          <Typography variant='paragraph' style={{ marginBottom: '20px' }}>
-            Všechny technologie které učíme lze integrovat
-            do již rozpracovaných systému. Nemusíte se tedy bát
-            zpětné nekompatibily a nutného přepsání celého projektu.
-          </Typography>
-        </div>
 
         <h2 className={classes.title}>Kurzy</h2>
         <GridContainer>

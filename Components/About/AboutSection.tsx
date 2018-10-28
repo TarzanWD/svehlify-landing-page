@@ -29,7 +29,7 @@ const AboutSection: React.SFC<IProps> = (props) => {
           textAlign: 'center'
         }}
       >
-        Úvod
+        Proč Svehlify kurzy?
       </h2>
       <Typography
         style={{
