@@ -55,7 +55,7 @@ const HeaderLinks = ({ ...props }) => {
       <ListItem className={classes.listItem}>
         <Tooltip
           id='instagram-twitter'
-          title='Follow us on twitter'
+          title='Sledujte svehlify twitteru'
           placement={innerWidth > 959 ? 'top' : 'left'}
           classes={{ tooltip: classes.tooltip }}
         >
@@ -72,7 +72,7 @@ const HeaderLinks = ({ ...props }) => {
       <ListItem className={classes.listItem}>
         <Tooltip
           id='instagram-github'
-          title='Follow us on github'
+          title='Sledujte nás na githubu'
           placement={innerWidth > 959 ? 'top' : 'left'}
           classes={{ tooltip: classes.tooltip }}
         >

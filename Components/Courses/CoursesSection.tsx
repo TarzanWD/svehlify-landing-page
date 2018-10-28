@@ -135,7 +135,7 @@ class CoursesSection extends React.Component<IProps, IState> {
         </Modal>
 
         <h2 className={classes.title}>Kurzy</h2>
-        <GridContainer>
+        <GridContainer style={{ marginBottom: '30px' }}>
           <GridItem xs={12} sm={12} md={6} lg={4}>
             <Card className={classes.card}>
               <CardActionArea onClick={this.openModel('FrontendBasic')}>
@@ -219,7 +219,9 @@ class CoursesSection extends React.Component<IProps, IState> {
               </CardActions>
             </Card>
           </GridItem>
+        </GridContainer>
 
+        <GridContainer>
           <GridItem xs={12} sm={12} md={6} lg={4}>
             <Card className={classes.card}>
               <CardActionArea onClick={this.openModel('CICDCourse')}>
