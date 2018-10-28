@@ -55,10 +55,10 @@ const teamStyle = () => createStyles({
 })
 
 const team1 = 'static/img/ourTeam/svehla_front.jpg'
-const team2 = 'static/img/ourTeam/filip_dobrovolny.jpg'
+const team2 = 'static/img/ourTeam/marek_hradil.jpg'
 const team3 = 'static/img/ourTeam/svehla_backend.jpg'
 
-interface IProps extends WithStyles<typeof teamStyle> {}
+interface IProps extends WithStyles<typeof teamStyle> { }
 
 const TeamSection = (props: IProps) => {
   const { classes } = props
@@ -80,13 +80,13 @@ const TeamSection = (props: IProps) => {
               <h4 className={classes.cardTitle}>
                 Kuba Švehla
                 <br />
-                <small className={classes.smallTitle}>Front-end developer</small>
+                <small className={classes.smallTitle}>Front-End Developer</small>
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                Za poslední roky jsem prošel mnoho projektů od server render
-                jade šablon v nodejs, až k relay graphql stacku podobnému tomu,
-                který používá a vývíjí například facebook.com
+                  Za poslední roky prošel mnoho projektů od server render
+                  Jade šablon v NodeJs, až k Relay GraphQL stacku podobnému tomu,
+                  který používá a vývíjí například Facebook.
                 </p>
               </CardBody>
               <CardFooter className={classes.justifyCenter}>
@@ -120,15 +120,19 @@ const TeamSection = (props: IProps) => {
                 <img src={team2} alt='...' className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                Filip Dobrovolný
+                Marek Hradil
                 <br />
-                <small className={classes.smallTitle}>DevOps/Linux</small>
+                <small className={classes.smallTitle}>
+                  Full-Stack Developer
+                </small>
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
-                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+                  Programuje už od osmi let.
+                  V jedenácti letech se poprvé setkal s webovým vývojem
+                  a od té doby se mu věnuje téměř nepřetržitě.
+                  Nyní pracuje pro brněnskou softwarovou firmu
+                  a ve volném čase vyučuje programování.
                 </p>
               </CardBody>
               <CardFooter className={classes.justifyCenter}>
@@ -157,15 +161,15 @@ const TeamSection = (props: IProps) => {
               <h4 className={classes.cardTitle}>
                 Kuba Švehla
                 <br />
-                <small className={classes.smallTitle}>Backend developer</small>
+                <small className={classes.smallTitle}>Backend Developer</small>
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                  Od svých 15let jsem se začal zajímat o svět programování.
-                  Jako každý správný Frontendista jsem začal s 350 stránkovou
+                  Od svých 15let se začal zajímat o svět programování.
+                  Jako každý správný Frontendista začal s 350 stránkovou
                   knížkou jQuery.
-                  Postupem času jsem přešel na nodejs u které jsem zůstal už více
-                  než 5 let a tím začala dlouhá láska mezi mnou a javascriptem.
+                  Postupem času přešel na NodeJS v kterém nyní pracuje už více
+                  než 5 let.
                 </p>
               </CardBody>
               <CardFooter className={classes.justifyCenter}>
