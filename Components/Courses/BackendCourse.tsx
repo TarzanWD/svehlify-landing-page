@@ -42,50 +42,6 @@ export default ({ classes }: IProps) => (
       které vám ulehčí každodenní práci a udělá vás zase šťastnými.
     </Typography>
     <br />
-
-    <Grid container spacing={24}>
-      <Hidden xsDown>
-        <Grid
-          item
-          md={5}
-          sm={5}
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          <Avatar
-            alt='lecturer'
-            src='../../../static/img/ourTeam/svehla.jpg'
-            style={{ width: '25vh', height: '25vh', margin: '10vh 0' }}
-          />
-        </Grid>
-      </Hidden>
-      <Grid
-        item
-        md={6}
-        sm={5}
-        xs={12}
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          flexDirection: 'column',
-          margin: '1.5rem 0'
-        }}
-      >
-        Školící
-        <Typography variant='h5' style={{ marginBottom: '0.5rem' }}>
-          Švehl Jakub
-        </Typography>
-        <Typography>
-          Za poslední roky jsem prošel mnoho projektů od server render jade šablon v nodejs,
-          až k relay graphql stacku podobnému tomu, který používá a vývíjí například facebook.com
-        </Typography>
-      </Grid>
-    </Grid>
-
     <Grid container spacing={24}>
       <Hidden xsDown>
         <Grid
