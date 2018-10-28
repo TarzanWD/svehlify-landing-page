@@ -34,7 +34,8 @@ const Footer = (props: IProps) =>  {
                 className={classes.block}
                 target='_blank'
               >
-                Twitter
+                Twitter{' '}
+                <img style={{ height: '20px' }} src='/static/icons/twitter.svg' />
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
@@ -43,20 +44,21 @@ const Footer = (props: IProps) =>  {
                 className={classes.block}
                 target='_blank'
               >
-                Github
+                Github{' '}
+                <img style={{  height: '18px' }} src='/static/icons/github.svg' />
               </a>
             </ListItem>
           </List>
         </div>
         <div className={classes.right}>
           &copy; {new Date().getFullYear()} , made with{' '}
-          <Favorite className={classes.icon} /> by{' '}
+          positive energy by{' '}
           <a
             href='https://twitter.com/KubaSvehla'
             className={aClasses}
             target='_blank'
           >
-            Kuba Švehla
+            Kuba Švehla <Favorite className={classes.icon} />
           </a>{' '}
         </div>
       </div>

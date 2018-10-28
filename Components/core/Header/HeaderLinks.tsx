@@ -65,7 +65,7 @@ const HeaderLinks = ({ ...props }) => {
             target='_blank'
             className={classes.navLink}
           >
-            <img style={{ color: '#FFF', height: '25px' }} src='/static/icons/twitter.svg' />
+            <img style={{ color: '#FFF', height: '26px' }} src='/static/icons/twitter.svg' />
           </Button>
         </Tooltip>
       </ListItem>
@@ -83,7 +83,7 @@ const HeaderLinks = ({ ...props }) => {
             target='_blank'
             className={classes.navLink}
           >
-            <img style={{ color: '#FFF', height: '24px' }} src='/static/icons/github.svg' />
+            <img style={{ fill: '#FFF', height: '24px' }} src='/static/icons/github.svg' />
           </Button>
         </Tooltip>
       </ListItem>

@@ -139,10 +139,10 @@ class CoursesSection extends React.Component<IProps, IState> {
         </Modal>
 
         <div className={classes.aboutUs}>
-          <Typography variant='h4'>
-            Kdo jsme?
+          <Typography variant='h5'>
+            Proč Svehlify?
           </Typography>
-          <Typography style={{ marginBottom: '20px' }}>
+          <Typography variant='paragraph' style={{ marginBottom: '20px' }}>
             Jsme skupina lidí, kteri si v životě prošli práci na enterprise projektech a chtějí
             zachránit lidstvo a vzbouřit programový k tomu, ať se do starého enterprise
             kodu už nový nepřidává a věci se upravují a budují znova a čištěji
@@ -150,23 +150,25 @@ class CoursesSection extends React.Component<IProps, IState> {
 
 
           <Typography variant='h5'>
-            Školíme jen věci, které reálně používáme v produkci
+            Připraveni na produkci
           </Typography>
-          <Typography style={{ marginBottom: '20px' }}>
-            Technologie které skolime využívají statisíce firem...
-            Například Facebook airbnb github apple a milion dalších firema
-            pomáhají jim k ladnemu chodu.
+          <Typography variant='paragraph'>
+            Existuje mnoho technologií, kterým je dobré se vyhnout, nebo jsou 
+            úžasné, ale nejsou ještě připravené na produkci.
+            Technologie které školime využívají statisíce firem po celém světě.
+          </Typography>
+          <Typography variant='paragraph' style={{ marginBottom: '20px' }}>
+            Jako jedno z hlavních bych vybral firmy jako:
+            Facebook, airbnb, github, apple a další...
           </Typography>
 
-          <Typography style={{ marginBottom: '20px' }}>
+          <Typography variant='h5'>
+            Budou kurzy prospěšné i ve vaší firmě?
+          </Typography>
+          <Typography variant='paragraph' style={{ marginBottom: '20px' }}>
             Všechny technologie které učíme lze integrovat
-            do vašeho již rozděleného systému a nemusíte se
-            bát zpětné nekompatibily
-          </Typography>
-
-          <h3 className={classes.title}>Další věci</h3>
-          <Typography>
-            Začali jsme teprve 2018 ale jsme hustí
+            do již rozpracovaných systému. Nemusíte se tedy bát
+            zpětné nekompatibily a nutného přepsání celého projektu.
           </Typography>
         </div>
 
